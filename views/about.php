@@ -7,6 +7,11 @@
     <!-- Triangle Shape Background -->
     <div class="about-triangle-bg"></div>
 
+    <!-- Animated Light Border SVG -->
+    <svg class="about-triangle-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M 0 100 L 0 0 L 100 0 L 0 100 L 100 100 L 100 0 L 0 100" class="about-triangle-path"></path>
+    </svg>
+
     <!-- Content on top -->
     <div class="about-hero-content">
         <div class="container">
