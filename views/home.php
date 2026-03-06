@@ -1,90 +1,4 @@
-<?php
-
-/**
- * Single Page Entry Point
- * All content is handled here for initial development.
- */
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Single Page | BCS Project</title>
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="public/css/style.css">
-</head>
-
-<body class="d-flex flex-column min-vh-100">
-
-    <!-- Sidebar Navigation Menu -->
-    <div class="menu-overlay" id="menu-overlay"></div>
-    <nav class="sidebar-nav" id="sidebar-nav">
-        <div class="sidebar-header d-flex align-items-center justify-content-between">
-            <a href="#home">
-                <img src="public/images/logo/logo01.png" alt="BCS" style="height: 45px; width: auto;">
-            </a>
-            <button class="menu-close-btn" id="menu-close-btn">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-        <div class="sidebar-content">
-            <ul class="sidebar-links">
-                <li class="sidebar-link-item"><a href="#home" class="sidebar-link">Home</a></li>
-                <li class="sidebar-link-item"><a href="#about" class="sidebar-link">About Us</a></li>
-                <li class="sidebar-link-item"><a href="#how-we-help" class="sidebar-link">Services</a></li>
-                <li class="sidebar-link-item"><a href="#faq" class="sidebar-link">FAQ & Support</a></li>
-                <li class="sidebar-link-item"><a href="#contact" class="sidebar-link">Contact</a></li>
-            </ul>
-        </div>
-        <div class="sidebar-footer">
-            <div class="sidebar-brand d-flex align-items-center mb-2">
-                <img src="public/images/logo/bcslogo.png" alt="BCS" class="sidebar-logo-img me-2" style="height: 30px; width: auto;">
-                <span>BCS ADS Co.</span>
-            </div>
-            <p class="small text-muted mb-0">Strategic Digital Transformation</p>
-        </div>
-    </nav>
-
-    <!-- Main Header -->
-    <header class="main-header" id="main-header">
-        <div class="container-fluid px-lg-5">
-            <div class="header-inner d-flex align-items-center justify-content-between">
-                <!-- Logo -->
-                <a href="#home" class="header-logo d-flex align-items-center">
-                    <img src="public/images/logo/logo01.png" alt="BCS ADS Co. Logo" class="header-logo-img me-2">
-                    <!-- <span class="logo-text fw-bold">BCS ADS Co.</span> -->
-                </a>
-
-                <!-- Hamburger Trigger -->
-                <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main id="main-content">
-        <!-- Hero Section -->
+﻿        <!-- Hero Section -->
         <section id="home" class="hero-section overflow-hidden position-relative">
             <!-- Background Swiper (Slides L to R) -->
             <div class="swiper hero-bg-swiper position-absolute top-0 start-0 w-100 h-100">
@@ -497,7 +411,7 @@
                                 <div class="col-lg-7">
                                     <span class="panel-eyebrow">06 &mdash; Web Design</span>
                                     <h3 class="panel-title">Websites That Work <br>While You Sleep</h3>
-                                    <p class="panel-desc">Beautifully crafted websites that blend premium aesthetics with seamless functionality — giving your brand a powerful digital home that drives real results 24/7.</p>
+                                    <p class="panel-desc">Beautifully crafted websites that blend premium aesthetics with seamless functionality ΓÇö giving your brand a powerful digital home that drives real results 24/7.</p>
                                     <ul class="panel-features">
                                         <li><span class="feat-icon">&#10003;</span> Responsive UI/UX design &amp; prototyping</li>
                                         <li><span class="feat-icon">&#10003;</span> E-commerce &amp; custom web development</li>
@@ -797,15 +711,15 @@
                                 <h4 class="fw-bold mb-3" style="font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; color: #2e1a8e;">Why People Trust Us?</h4>
                                 <ul class="list-unstyled mb-0" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">
                                     <li class="mb-2 d-flex align-items-center" style="color: rgba(46, 26, 142, 0.9); font-weight: 500;">
-                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">✓</span>
+                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">Γ£ô</span>
                                         Unmatched Reliability
                                     </li>
                                     <li class="mb-2 d-flex align-items-center" style="color: rgba(46, 26, 142, 0.9); font-weight: 500;">
-                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">✓</span>
+                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">Γ£ô</span>
                                         Innovative Digital Strategies
                                     </li>
                                     <li class="d-flex align-items-center" style="color: rgba(46, 26, 142, 0.9); font-weight: 500;">
-                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">✓</span>
+                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">Γ£ô</span>
                                         Data-Driven Results & Growth
                                     </li>
                                 </ul>
@@ -903,127 +817,3 @@
 
 
 
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Column 1: Brand -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-brand">
-                        <a href="#" class="footer-logo">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--primary)" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M2 17L12 22L22 17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M2 12L12 17L22 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <span class="footer-brand-name">BCS ADS Co.</span>
-                        </a>
-                        <p>Empowering brands with precision-driven digital solutions. We turn your vision into high-impact reality through innovative strategy and design.</p>
-                        <div class="footer-social-links">
-                            <a href="#" class="social-link" aria-label="Instagram">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Facebook">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="LinkedIn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                    <rect x="2" y="9" width="4" height="12"></rect>
-                                    <circle cx="4" cy="4" r="2"></circle>
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="X (Twitter)">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Column 2: Quick Links -->
-                <div class="col-lg-2 col-md-6">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li class="footer-link-item"><a href="#home" class="footer-link">Home</a></li>
-                        <li class="footer-link-item"><a href="#about" class="footer-link">About Us</a></li>
-                        <li class="footer-link-item"><a href="#how-we-help" class="footer-link">Services</a></li>
-                        <li class="footer-link-item"><a href="#faq" class="footer-link">FAQ & Support</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Services -->
-                <div class="col-lg-2 col-md-6">
-                    <h4 class="footer-title">Our Services</h4>
-                    <ul class="footer-links">
-                        <li class="footer-link-item"><a href="#" class="footer-link">Branding</a></li>
-                        <li class="footer-link-item"><a href="#" class="footer-link">Advertising</a></li>
-                        <li class="footer-link-item"><a href="#" class="footer-link">Performance</a></li>
-                        <li class="footer-link-item"><a href="#" class="footer-link">SEO Solutions</a></li>
-                        <li class="footer-link-item"><a href="#" class="footer-link">Web Design</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4: Contact -->
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="footer-title">Contact Us</h4>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                        </div>
-                        <div class="footer-contact-text"> Sector 8, Gandhidham, <br>Gujarat, India - 370201</div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                        </div>
-                        <div class="footer-contact-text">+91 98765 43210</div>
-                    </div>
-                    <div class="footer-newsletter mt-4">
-                        <form action="#">
-                            <input type="email" class="form-control" placeholder="Your Email Address" required>
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100 mt-2">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <p class="footer-bottom-text mb-0">&copy; <?php echo date('Y'); ?> Business Care Solutions. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item me-4"><a href="#" class="footer-link small">Privacy Policy</a></li>
-                            <li class="list-inline-item"><a href="#" class="footer-link small">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="public/js/main.js"></script>
-</body>
-
-</html>
