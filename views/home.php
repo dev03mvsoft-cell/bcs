@@ -5,20 +5,24 @@
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('public/images/heroimage.jpg');"></div>
+                        <div class="hero-bg-img">
+                            <video autoplay muted loop playsinline poster="/public/images/home/14.jpg" class="hero-bg-video">
+                                <source src="/public/images/home/bcshomevideo.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                     <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070');"></div>
-                    </div>
+                    <!-- <div class="swiper-slide">
+                        <div class="hero-bg-img" style="background-image: url('/public/images/home/15.jpg');"></div>
+                    </div> -->
                     <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2070');"></div>
-                    </div>
+                    <!-- <div class="swiper-slide">
+                        <div class="hero-bg-img" style="background-image: url('/public/images/home/16.jpg');"></div>
+                    </div> -->
                     <!-- Slide 4 -->
-                    <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2070');"></div>
-                    </div>
+                    <!-- <div class="swiper-slide">
+                        <div class="hero-bg-img" style="background-image: url('/public/images/home/17.jpg');"></div>
+                    </div> -->
                 </div>
             </div>
 
@@ -430,47 +434,66 @@
 
         <section class="loop-images" style="--bg: white;">
             <div class="row align-items-center">
-                <div class="col-sm-8 position-relative" style="overflow: hidden;">
-                    <div class="carousel-track" style="--time: 60s; --total: 12;">
+                <div class="col-sm-8 position-relative">
+                    <div class="carousel-track" style="--time: 60s; --total: 18;">
                         <div class="carousel-item" style="--i: 1;">
-                            <img src="https://images.unsplash.com/photo-1758314896569-b3639ee707c4?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork0.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 2;">
-                            <img src="https://plus.unsplash.com/premium_photo-1671649240322-2124cd07eaae?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork1.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 3;">
-                            <img src="https://plus.unsplash.com/premium_photo-1673029925648-af80569efc46?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork2.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 4;">
-                            <img src="https://plus.unsplash.com/premium_photo-1666533099824-abd0ed813f2a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork3.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 5;">
-                            <img src="https://plus.unsplash.com/premium_photo-1671105035554-7f8c2a587201?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork4.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 6;">
-                            <img src="https://plus.unsplash.com/premium_photo-1686750875748-d00684d36b1e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork5.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 7;">
-                            <img src="https://plus.unsplash.com/premium_photo-1686844462591-393ceae12be0?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork6.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 8;">
-                            <img src="https://plus.unsplash.com/premium_photo-1686839181367-febb561faa53?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork7.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 9;">
-                            <img src="https://plus.unsplash.com/premium_photo-1671199850329-91cae34a6b6d?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork8.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 10;">
-                            <img src="https://plus.unsplash.com/premium_photo-1685655611311-9f801b43b9fa?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork9.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 11;">
-                            <img src="https://plus.unsplash.com/premium_photo-1675598468920-878ae1e46f14?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork10.jpg" alt="image">
                         </div>
                         <div class="carousel-item" style="--i: 12;">
-                            <img src="https://images.unsplash.com/photo-1718036094878-ecdce2b1be95?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                            <img src="public/images/bcswork/bcsWork12.jpg" alt="image">
                         </div>
+                        <div class="carousel-item" style="--i: 13;">
+                            <img src="public/images/bcswork/bcsWork13.jpg" alt="image">
+                        </div>
+                        <div class="carousel-item" style="--i: 14;">
+                            <img src="public/images/bcswork/bcsWork14.jpg" alt="image">
+                        </div>
+                        <div class="carousel-item" style="--i: 15;">
+                            <img src="public/images/bcswork/bcsWork15.jpg" alt="image">
+                        </div>
+                        <div class="carousel-item" style="--i: 16;">
+                            <img src="public/images/bcswork/bcsWork16.jpg" alt="image">
+                        </div>
+                        <div class="carousel-item" style="--i: 17;">
+                            <img src="public/images/bcswork/bcsWork17.jpg" alt="image">
+                        </div>
+                        <div class="carousel-item" style="--i: 18;">
+                            <img src="public/images/bcswork/bcsWork18.jpg" alt="image">
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-sm-4 px-lg-5">
+                <div class="col-sm-4 px-lg-5 position-relative z-2">
                     <div class="loop-content text-dark">
                         <h2 class="display-5 fw-bold mb-3">Creative <br>Works</h2>
                         <p class="lead text-muted">A collection of our most impactful visual projects and creative campaigns.</p>
@@ -505,54 +528,19 @@
                     </div>
                 </div>
 
-                <!-- Logo Grid (Expanded to 40) -->
+                <!-- Logo Grid (Expanded to 41) -->
                 <div class="row g-4 row-cols-2 row-cols-md-4 row-cols-lg-5">
                     <?php
-                    // Using a loop to generate 40 dummy logos for demonstration
-                    $dummy_companies = [
-                        'maersk.com',
-                        'fedex.com',
-                        'dhl.com',
-                        'ups.com',
-                        'hapag-lloyd.com',
-                        'coscoshipping.com',
-                        'msc.com',
-                        'evergreen-marine.com',
-                        'wanhai.com',
-                        'zim.com',
-                        'one-line.com',
-                        'yangming.com',
-                        'hmm21.com',
-                        'pilship.com',
-                        'cmacgm.com',
-                        'hamburgsud.com',
-                        'oocl.com',
-                        'apl.com',
-                        'nykline.com',
-                        'molgroup.com',
-                        'kline.com',
-                        'sealandmaersk.com',
-                        'safmarine.com',
-                        'mcc.com.sg',
-                        'seago-line.com',
-
-
-                    ];
-                    foreach ($dummy_companies as $company) : ?>
+                    // Using local client logos (41 files available in public/images/icons/icons/)
+                    for ($i = 1; $i <= 41; $i++) : ?>
                         <div class="col">
                             <div class="client-logo-card">
-                                <?php
-                                // Clean the domain for the placeholder text
-                                $clean_name = str_replace(['.com', '.org', '.net', '-'], ['', '', '', ' '], $company);
-                                $clean_name = ucwords($clean_name);
-                                ?>
-                                <img src="https://img.logo.dev/<?php echo $company; ?>?size=128"
-                                    alt="<?php echo $clean_name; ?>"
-                                    class="client-logo-img"
-                                    onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=<?php echo urlencode($clean_name); ?>&background=f1f5f9&color=64748b&size=128&font-size=0.35'">
+                                <img src="/public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png"
+                                    alt=""
+                                    class="client-logo-img">
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    <?php endfor; ?>
                 </div>
             </div>
         </section>
@@ -706,20 +694,20 @@
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="faq-image-container position-relative rounded-4 overflow-hidden shadow-lg h-100" style="min-height: 450px;">
-                            <div class="faq-image-bg position-absolute top-0 start-0 w-100 h-100" style="background-image: url('public/images/about/13.png'); background-size: cover; background-position: center; background-attachment: fixed;"></div>
+                            <div class="faq-image-bg position-absolute top-0 start-0 w-100 h-100" style="background-image: url('/public/images/home/bcshome15.jpg'); background-size: cover; background-position: center; background-attachment: scroll;"></div>
                             <div class="faq-glass-overlay position-absolute bottom-0 start-0 w-100 p-4 m-3" style="width: calc(100% - 2rem) !important; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 1.5rem; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);">
                                 <h4 class="fw-bold mb-3" style="font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; color: #2e1a8e;">Why People Trust Us?</h4>
                                 <ul class="list-unstyled mb-0" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">
                                     <li class="mb-2 d-flex align-items-center" style="color: rgba(46, 26, 142, 0.9); font-weight: 500;">
-                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">Γ£ô</span>
+                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;"></span>
                                         Unmatched Reliability
                                     </li>
                                     <li class="mb-2 d-flex align-items-center" style="color: rgba(46, 26, 142, 0.9); font-weight: 500;">
-                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">Γ£ô</span>
+                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;"></span>
                                         Innovative Digital Strategies
                                     </li>
                                     <li class="d-flex align-items-center" style="color: rgba(46, 26, 142, 0.9); font-weight: 500;">
-                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;">Γ£ô</span>
+                                        <span class="me-2 d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 20px; height: 20px; font-size: 0.7rem; color: #fff;"></span>
                                         Data-Driven Results & Growth
                                     </li>
                                 </ul>
@@ -745,75 +733,75 @@
                     </div>
                 </div>
                 <div class="options">
-                    <div class="option active" style="--optionBackground:url(https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200);">
+                    <div class="option active" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite0.jpg);">
+                        <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
-                            <div class="icon">
-                                <i class="fas fa-ship"></i>
-                            </div>
+
                             <div class="info">
-                                <div class="main">Global Logistics</div>
-                                <div class="sub">World-class shipping and handling</div>
+                                <div class="main">Hatkala</div>
+                            </div>
+                            <div class="project-link ms-3">
+                                <a href="https://hatkala.com/" target="_blank" class="text-decoration-none small">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="option" style="--optionBackground:url(https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=1200);">
+                    <div class="option" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite1.jpg);">
+                        <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
-                            <div class="icon">
-                                <i class="fas fa-warehouse"></i>
-                            </div>
+
                             <div class="info">
-                                <div class="main">Smart Warehouse</div>
-                                <div class="sub">Advanced storage solutions</div>
+                                <div class="main">Solanki Ship Care</div>
+
+                            </div>
+                            <div class="project-link ms-3">
+                                <a href="https://www.solankiship.com/" target="_blank" class="text-decoration-none small">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="option" style="--optionBackground:url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200);">
+                    <div class="option" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite2.jpg);">
+                        <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
-                            <div class="icon">
-                                <i class="fas fa-truck-fast"></i>
-                            </div>
+
                             <div class="info">
-                                <div class="main">Fast Delivery</div>
-                                <div class="sub">On-time, every time</div>
+                                <div class="main">Shanti Shipping</div>
+
+                            </div>
+                            <div class="project-link ms-3">
+                                <a href="https://www.shantishippingservices.in/" target="_blank" class="text-decoration-none small">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="option" style="--optionBackground:url(https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200);">
+                    <div class="option" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite3.jpg);">
+                        <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
-                            <div class="icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
+
                             <div class="info">
-                                <div class="main">24/7 Support</div>
-                                <div class="sub">Dedicated assistance always</div>
+                                <div class="main">TurantGo Multimodal Solutions </div>
+
+                            </div>
+                            <div class="project-link ms-3">
+                                <a href="https://turantgo.com/" target="_blank" class="text-decoration-none small">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="option" style="--optionBackground:url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200);">
+                    <div class="option" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite4.jpg);">
+                        <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
-                            <div class="icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
+
                             <div class="info">
-                                <div class="main">Innovation</div>
-                                <div class="sub">Leading with digital technology</div>
+                                <div class="main">Sea Leaf Resort</div>
+
+                            </div>
+                            <div class="project-link ms-3">
+                                <a href="https://leafresort.in/" target="_blank" class="text-decoration-none small">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
-
-

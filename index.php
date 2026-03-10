@@ -24,32 +24,12 @@ $route = trim($route, '/');
 $routes = [
     'home'     => '',
     'about'    => 'about',
-    'products' => 'products',
-    'gallery'  => 'gallery',
+    'services' => 'services',
+    'career'  => 'career',
     'contact'  => 'contact'
 ];
 
-// 4. Product Dropdown Items (Sub-routes)
-$product_categories = [
-    'Provisions Supply' => [
-        'Fresh Provisions & Food Items' => 'products/fresh-provisions',
-        'Frozen & Dry Provisions'       => 'products/fresh-provisions'
-    ],
-    'Bonded Stores Supply' => [
-        'Premium Liquor & Tobacco'   => 'products/bonded-stores',
-        'Certified Bonded Inventory' => 'products/bonded-stores'
-    ],
-    'Ship Stores & Chandlery' => [
-        'Deck & Engine Stores'      => 'products/ship-stores',
-        'Marine Technical Supplies' => 'products/ship-stores',
-        'Safety & LSA Equipment'    => 'products/lsa-liferafts',
-        'Medicine & Dispensary'     => 'products/medicine-stores'
-    ],
-    'Transit & Air Cargo' => [
-        'Ship Spares Logistics' => 'products/transit-shipments',
-        'Customs Clearance'     => 'products/transit-shipments'
-    ]
-];
+
 
 // 5. Match Route → View File
 $page = 'home'; // Default page
@@ -126,15 +106,15 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
             <ul class="sidebar-links">
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>" class="sidebar-link <?php echo $page === 'home' ? 'active' : ''; ?>">Home</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>about" class="sidebar-link <?php echo $page === 'about' ? 'active' : ''; ?>">About Us</a></li>
-                <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>products" class="sidebar-link <?php echo $page === 'products' ? 'active' : ''; ?>">Products</a></li>
-                <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>gallery" class="sidebar-link <?php echo $page === 'gallery' ? 'active' : ''; ?>">Gallery</a></li>
+                <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>services" class="sidebar-link <?php echo $page === 'services' ? 'active' : ''; ?>">Services</a></li>
+                <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>career" class="sidebar-link <?php echo $page === 'gallery' ? 'active' : ''; ?>">Career</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>contact" class="sidebar-link <?php echo $page === 'contact' ? 'active' : ''; ?>">Contact</a></li>
             </ul>
         </div>
         <div class="sidebar-footer">
             <div class="sidebar-brand d-flex align-items-center mb-2">
                 <img src="public/images/logo/bcslogo.png" alt="BCS" class="sidebar-logo-img me-2" style="height: 30px; width: auto;">
-                <span>BCS ADS Co.</span>
+                <span>Business Care Solutions</span>
             </div>
             <p class="small text-muted mb-0">Strategic Digital Transformation</p>
         </div>
