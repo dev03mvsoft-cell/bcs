@@ -25,11 +25,10 @@ $routes = [
     'home'     => '',
     'about'    => 'about',
     'services' => 'services',
-    'career'  => 'career',
+    'products' => 'products',
+    'career'   => 'career',
     'contact'  => 'contact'
 ];
-
-
 
 // 5. Match Route → View File
 $page = 'home'; // Default page
@@ -39,20 +38,7 @@ if ($route === '' || $route === 'index.php') {
 } elseif (in_array($route, $routes)) {
     $page = array_search($route, $routes);
 } else {
-    // Check product sub-routes
-    $found = false;
-    foreach ($product_categories as $cat => $items) {
-        foreach ($items as $label => $sub_route) {
-            if ($route === $sub_route) {
-                $page = str_replace('/', '-', $sub_route); // e.g. products-fresh-provisions
-                $found = true;
-                break 2;
-            }
-        }
-    }
-    if (!$found) {
-        $page = '404';
-    }
+    $page = '404';
 }
 
 // 6. Set the view file path
@@ -65,7 +51,7 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCS ADS Co. | Business Care Solutions</title>
+    <title>BCS | Business Care Solutions</title>
 
     <!-- Base URL for assets -->
     <base href="<?php echo BASE_URL; ?>">
@@ -107,7 +93,8 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>" class="sidebar-link <?php echo $page === 'home' ? 'active' : ''; ?>">Home</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>about" class="sidebar-link <?php echo $page === 'about' ? 'active' : ''; ?>">About Us</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>services" class="sidebar-link <?php echo $page === 'services' ? 'active' : ''; ?>">Services</a></li>
-                <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>career" class="sidebar-link <?php echo $page === 'gallery' ? 'active' : ''; ?>">Career</a></li>
+                <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>products" class="sidebar-link <?php echo $page === 'products' ? 'active' : ''; ?>">Products</a></li>
+                <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>career" class="sidebar-link <?php echo $page === 'career' ? 'active' : ''; ?>">Career</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>contact" class="sidebar-link <?php echo $page === 'contact' ? 'active' : ''; ?>">Contact</a></li>
             </ul>
         </div>

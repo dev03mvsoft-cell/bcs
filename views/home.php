@@ -40,7 +40,7 @@
                                         <path d="M2 12L12 17L22 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
-                                <span class="hero-card-brand">BCS ADS Co.</span>
+                                <span class="hero-card-brand">Business Care Solutions</span>
                             </div>
 
                             <!-- Vertical Text Swiper -->

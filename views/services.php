@@ -420,7 +420,7 @@
         </div>
 
         <div class="detail-footer">
-            <a href="contact" class="btn btn-primary px-5 py-3 rounded-pill fw-bold" style="background: linear-gradient(135deg, #2563eb, #1d4ed8); border: none;">Start Your Project</a>
+            <a href="contact" class="btn btn-primary px-5 py-3 rounded-pill fw-bold">Start Your Project</a>
         </div>
     </div>
 </section>
