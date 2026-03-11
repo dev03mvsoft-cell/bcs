@@ -1,4 +1,4 @@
-﻿        <!-- Hero Section -->
+        <!-- Hero Section -->
         <section id="home" class="hero-section overflow-hidden position-relative">
             <!-- Background Swiper (Slides L to R) -->
             <div class="swiper hero-bg-swiper position-absolute top-0 start-0 w-100 h-100">
@@ -130,11 +130,11 @@
 
                             <!-- Base Image -->
                             <div class="about-img-wrapper base-wrapper">
-                                <img src="public/images/about/13.png" alt="About Base" class="about-img-base img-fluid">
+                                <img src="public/images/about/13.png" alt="Creative Graphic Design Services in Gandhidham" class="about-img-base img-fluid">
                             </div>
                             <!-- Sliding Image -->
                             <div class="about-img-wrapper slide-wrapper about-img-slide">
-                                <img src="public/images/about/12.png" alt="About Part" class="img-fluid">
+                                <img src="public/images/about/12.png" alt="Strategic Branding Solutions Kutch" class="img-fluid">
                                 <!-- Bottom Message -->
                                 <div class="about-bottom-msg mt-4">BUILDING BRANDS</div>
                             </div>
@@ -176,10 +176,10 @@
             <div class="help-assembly-bg-wrapper">
                 <div class="help-assembly-container">
                     <div class="help-assembly-part part-left">
-                        <img src="public/images/serivepage/serivepage.png" alt="Service Part Left">
+                        <img src="public/images/serivepage/serivepage.png" alt="Website Development Excellence - BCS">
                     </div>
                     <div class="help-assembly-part part-right">
-                        <img src="public/images/serivepage/serivepage1.png" alt="Service Part Right">
+                        <img src="public/images/serivepage/serivepage1.png" alt="Digital Marketing Agency Assets">
                     </div>
                 </div>
             </div>
@@ -270,10 +270,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Digital Advertising">
+                                            <img src="public/images/serivepage/serivepage.png" alt="Premium Digital Advertising Agency Gandhidham">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Digital Advertising">
+                                            <img src="public/images/serivepage/serivepage1.png" alt="Creative Ad Campaigns Kutch">
                                         </div>
                                     </div>
                                 </div>
@@ -297,10 +297,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Performance Marketing">
+                                            <img src="public/images/serivepage/serivepage.png" alt="High Performance SEO Services India">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Performance Marketing">
+                                            <img src="public/images/serivepage/serivepage1.png" alt="ROI Driven Digital Marketing">
                                         </div>
                                     </div>
                                 </div>
@@ -324,10 +324,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="SEO">
+                                            <img src="public/images/serivepage/serivepage.png" alt="Top Search Engine Optimization Company">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="SEO">
+                                            <img src="public/images/serivepage/serivepage1.png" alt="Local SEO Gandhidham - BCS">
                                         </div>
                                     </div>
                                 </div>
@@ -351,10 +351,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Content Marketing">
+                                            <img src="public/images/serivepage/serivepage.png" alt="Professional Content Strategy Kutch">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Content Marketing">
+                                            <img src="public/images/serivepage/serivepage1.png" alt="Creative Copywriting Bureau">
                                         </div>
                                     </div>
                                 </div>
@@ -378,10 +378,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Social Media">
+                                            <img src="public/images/serivepage/serivepage.png" alt="Social Media Management Agency Gandhidham">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Social Media">
+                                            <img src="public/images/serivepage/serivepage1.png" alt="Instagram and Facebook Ad Experts">
                                         </div>
                                     </div>
                                 </div>
@@ -405,10 +405,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Web Design">
+                                            <img src="public/images/serivepage/serivepage.png" alt="Best Web Design Company in Kutch">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Web Design">
+                                            <img src="public/images/serivepage/serivepage1.png" alt="Responsive Website Development Services">
                                         </div>
                                     </div>
                                 </div>
@@ -431,64 +431,139 @@
             </div><!-- /.container -->
         </section>
 
+        <!-- HR & Workforce Solutions Section -->
+        <section id="hrms-solutions" class="hrms-section position-relative overflow-hidden mb-5">
+            <div class="container">
+                <div class="hrms-glass-card">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="hrms-content">
+                                <span class="hrms-tag">
+                                    <i class="fas fa-microchip me-2"></i> Digital Transformation
+                                </span>
+                                <h2 class="hrms-title">Modern HR & Workforce Solutions for Kutch</h2>
+                                <p class="lead text-muted mb-4">
+                                    We provide comprehensive digital infrastructure for businesses across Gujarat.
+                                    Our mission is to help organizations streamline and digitize their core HR processes
+                                    through professional, state-of-the-art technology.
+                                </p>
+
+                                <div class="hrms-feature-list">
+                                    <div class="hrms-feature-item">
+                                        <span class="hrms-feature-icon"><i class="fas fa-users"></i></span>
+                                        <span>Employee Management</span>
+                                    </div>
+                                    <div class="hrms-feature-item">
+                                        <span class="hrms-feature-icon"><i class="fas fa-calculator"></i></span>
+                                        <span>Payroll Processing</span>
+                                    </div>
+                                    <div class="hrms-feature-item">
+                                        <span class="hrms-feature-icon"><i class="fas fa-clock"></i></span>
+                                        <span>Attendance Tracking</span>
+                                    </div>
+                                    <div class="hrms-feature-item">
+                                        <span class="hrms-feature-icon"><i class="fas fa-user-plus"></i></span>
+                                        <span>Recruitment Tools</span>
+                                    </div>
+                                    <div class="hrms-feature-item">
+                                        <span class="hrms-feature-icon"><i class="fas fa-comments"></i></span>
+                                        <span>Team Collaboration</span>
+                                    </div>
+                                    <div class="hrms-feature-item">
+                                        <span class="hrms-feature-icon"><i class="fas fa-mobile-alt"></i></span>
+                                        <span>Mobile-First Access</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="superworks-badge shadow-sm">
+                                <div class="superworks-logo-wrap justify-content-between">
+                                    <img src="public/images/logo/superworks-logo.webp" alt="Superworks Logo" class="superworks-logo-img">
+
+                                </div>
+                                <h4 class="fw-bold mb-3">Empowering SMEs with Advanced HRMS</h4>
+                                <p class="text-muted small mb-4">
+                                    Through our strategic partnership with <span class="superworks-highlight">Superworks</span>, we deliver advanced HRMS technology
+                                    tailored for local businesses. This collaboration enables us to support SMEs in improving
+                                    operational efficiency and reducing manual HR tasks effectively.
+                                </p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="flex-shrink-0">
+                                        <div class="bg-primary-subtle p-3 rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold">Centralized Digital Platform</div>
+                                        <div class="small text-muted">Manage your entire workforce in one place.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section class="loop-images" style="--bg: white;">
             <div class="row align-items-center">
                 <div class="col-sm-8 position-relative">
                     <div class="carousel-track" style="--time: 60s; --total: 18;">
                         <div class="carousel-item" style="--i: 1;">
-                            <img src="public/images/bcswork/bcsWork0.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork0.jpg" alt="Creative Portfolio Item 1 - BCS Gandhidham">
                         </div>
                         <div class="carousel-item" style="--i: 2;">
-                            <img src="public/images/bcswork/bcsWork1.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork1.jpg" alt="Graphic Design Portfolio Kutch">
                         </div>
                         <div class="carousel-item" style="--i: 3;">
-                            <img src="public/images/bcswork/bcsWork2.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork2.jpg" alt="Web Development Project Display">
                         </div>
                         <div class="carousel-item" style="--i: 4;">
-                            <img src="public/images/bcswork/bcsWork3.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork3.jpg" alt="Digital Marketing Success Case">
                         </div>
                         <div class="carousel-item" style="--i: 5;">
-                            <img src="public/images/bcswork/bcsWork4.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork4.jpg" alt="Brand Identity Design Portfolio">
                         </div>
                         <div class="carousel-item" style="--i: 6;">
-                            <img src="public/images/bcswork/bcsWork5.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork5.jpg" alt="Social Media Creative Work 6">
                         </div>
                         <div class="carousel-item" style="--i: 7;">
-                            <img src="public/images/bcswork/bcsWork6.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork6.jpg" alt="Website UI UX Prototype 7">
                         </div>
                         <div class="carousel-item" style="--i: 8;">
-                            <img src="public/images/bcswork/bcsWork7.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork7.jpg" alt="Logistics Website Project 8">
                         </div>
                         <div class="carousel-item" style="--i: 9;">
-                            <img src="public/images/bcswork/bcsWork8.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork8.jpg" alt="Shipping Company Website Design 9">
                         </div>
                         <div class="carousel-item" style="--i: 10;">
-                            <img src="public/images/bcswork/bcsWork9.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork9.jpg" alt="E-commerce Solutions Portfolio 10">
                         </div>
                         <div class="carousel-item" style="--i: 11;">
-                            <img src="public/images/bcswork/bcsWork10.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork10.jpg" alt="Full Stack Web Dev Gandhidham 11">
                         </div>
                         <div class="carousel-item" style="--i: 12;">
-                            <img src="public/images/bcswork/bcsWork12.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork12.jpg" alt="Visual Branding Agency Kutch 12">
                         </div>
                         <div class="carousel-item" style="--i: 13;">
-                            <img src="public/images/bcswork/bcsWork13.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork13.jpg" alt="Graphic Design Agency Assets 13">
                         </div>
                         <div class="carousel-item" style="--i: 14;">
-                            <img src="public/images/bcswork/bcsWork14.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork14.jpg" alt="Modern Web Experiences 14">
                         </div>
                         <div class="carousel-item" style="--i: 15;">
-                            <img src="public/images/bcswork/bcsWork15.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork15.jpg" alt="Corporate Website Design Showcase 15">
                         </div>
                         <div class="carousel-item" style="--i: 16;">
-                            <img src="public/images/bcswork/bcsWork16.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork16.jpg" alt="Advertising Portfolio BCS 16">
                         </div>
                         <div class="carousel-item" style="--i: 17;">
-                            <img src="public/images/bcswork/bcsWork17.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork17.jpg" alt="Digital Strategy Presentation 17">
                         </div>
                         <div class="carousel-item" style="--i: 18;">
-                            <img src="public/images/bcswork/bcsWork18.jpg" alt="image">
+                            <img src="public/images/bcswork/bcsWork18.jpg" alt="Creative Visual Showcase 18">
                         </div>
 
                     </div>
@@ -536,7 +611,7 @@
                         <div class="col">
                             <div class="client-logo-card">
                                 <img src="/public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png"
-                                    alt=""
+                                    alt="BCS Elite Client Logo <?php echo $i; ?> - Trusted Digital Partner"
                                     class="client-logo-img">
                             </div>
                         </div>
@@ -610,6 +685,19 @@
                     </div>
                 </div>
             </div>
+        </section>
+        
+        <!-- Semantic SEO Content (Hidden) -->
+        <section style="display: none;" aria-hidden="true">
+            <h2>Best Website Development Company in Gandhidham & Kutch</h2>
+            <p>Business Care Solutions is the leading digital marketing agency in Gandhidham, providing top-tier web design company services in Kutch. We specialize as a website developer in Gandhidham, Bhuj, Anjar, and Mundra. Our expertise includes shipping website development in Kandla and logistics website development in Mundra. If you are looking for a web designer in Bhuj or a website designer in Anjar, BCS offers the most professional digital marketing company solutions in Gandhidham and Ahmedabad.</p>
+            <ul>
+                <li>Website Development Company in Gandhidham</li>
+                <li>Web Design Agency Ahmedabad</li>
+                <li>Digital Marketing Company in Gandhidham</li>
+                <li>SEO Company in Gandhidham</li>
+                <li>Shipping Software Development Kutch</li>
+            </ul>
         </section>
 
         <section class="transformation-cta text-center">

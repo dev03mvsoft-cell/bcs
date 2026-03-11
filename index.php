@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 /**
  * ============================================================
@@ -8,7 +9,6 @@
  */
 
 // 1. Auto-detect Base Path and URL
-// Works on both: localhost/bcs/ (XAMPP) and localhost:8000 (PHP built-in server)
 $script_dir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
 define('BASE_PATH', rtrim($script_dir, '/') . '/');
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
@@ -20,7 +20,53 @@ $route = str_replace(BASE_PATH, '', $request_uri);
 $route = explode('?', $route)[0]; // Remove query string
 $route = trim($route, '/');
 
-// 3. Main Site Routes
+// 3. SEO City-wise Configuration
+$seo_data = [
+    'website-development-gandhidham' => [
+        'city' => 'Gandhidham',
+        'title' => 'Website Development Company in Gandhidham | Web Design & Developer',
+        'desc' => 'Leading Website Development Company in Gandhidham. We offer premium Web Design and Website Developer services in Gandhidham Kutch.',
+        'keywords' => 'Website Development Company in Gandhidham, Web Design Company in Gandhidham, Website Developer in Gandhidham'
+    ],
+    'website-development-bhuj' => [
+        'city' => 'Bhuj',
+        'title' => 'Website Development Company in Bhuj | Web Designer in Kutch',
+        'desc' => 'Best Website Development Company in Bhuj. Expert Web Designer in Bhuj Kutch providing digital marketing and SEO services.',
+        'keywords' => 'Website Development Company in Bhuj, Web Designer in Bhuj Kutch, SEO Company in Bhuj'
+    ],
+    'website-development-anjar' => [
+        'city' => 'Anjar',
+        'title' => 'Website Development Company in Anjar | Website Designer Kutch',
+        'desc' => 'Premiere Website Development Company in Anjar. Specialized Website Designer in Anjar Kutch for business growth.',
+        'keywords' => 'Website Development Company in Anjar, Website Designer in Anjar Kutch, Social Media Marketing Agency in Anjar'
+    ],
+    'website-development-adipur' => [
+        'city' => 'Adipur',
+        'title' => 'Website Development Company in Adipur | Web Services Gandhidham',
+        'desc' => 'Professional Website Development Company in Adipur. High-end Web Development Services in Adipur and Digital Marketing.',
+        'keywords' => 'Website Development Company in Adipur, Web Development Services in Adipur, Digital Marketing Services in Adipur'
+    ],
+    'shipping-website-kandla' => [
+        'city' => 'Kandla',
+        'title' => 'Shipping Website Development in Kandla | Logistics Software',
+        'desc' => 'Specialized Shipping Website Development in Kandla and Logistics Software Development in Mundra Kutch.',
+        'keywords' => 'Website Development Company in Kandla, Web Design Company in Kandla Port, Shipping Website Development in Kandla'
+    ],
+    'logistics-website-mundra' => [
+        'city' => 'Mundra',
+        'title' => 'Logistics Website Development in Mundra | Web Developer Kutch',
+        'desc' => 'Expert Logistics Website Development in Mundra. Leading Web Developer in Mundra Kutch for shipping and cargo companies.',
+        'keywords' => 'Website Development Company in Mundra, Web Developer in Mundra Kutch, Logistics Website Development in Mundra'
+    ],
+    'digital-marketing-ahmedabad' => [
+        'city' => 'Ahmedabad',
+        'title' => 'Digital Marketing Agency in Ahmedabad | Website Development',
+        'desc' => 'Top Digital Marketing Agency in Ahmedabad & Website Development Company. SEO, SEM, and Payroll Software solutions.',
+        'keywords' => 'Website Development Company in Ahmedabad, Web Design Agency Ahmedabad, Digital Marketing Agency in Ahmedabad'
+    ]
+];
+
+// 4. Main Site Routes
 $routes = [
     'home'     => '',
     'about'    => 'about',
@@ -31,17 +77,36 @@ $routes = [
 ];
 
 // 5. Match Route → View File
-$page = 'home'; // Default page
+$page = 'home';
+$is_seo_page = false;
+$current_seo = null;
 
 if ($route === '' || $route === 'index.php') {
     $page = 'home';
+} elseif (isset($seo_data[$route])) {
+    $page = 'city-service';
+    $is_seo_page = true;
+    $current_seo = $seo_data[$route];
 } elseif (in_array($route, $routes)) {
     $page = array_search($route, $routes);
 } else {
     $page = '404';
 }
 
-// 6. Set the view file path
+// 6. Set Metadata
+$site_title = "BCS | Business Care Solutions";
+$meta_desc = "Empowering brands with precision-driven digital solutions. Gandhidham's premier hub for Web Development, Digital Marketing, and HR Solutions.";
+$meta_keywords = "Website Development Gandhidham, Digital Marketing Kutch, HR Software Gujarat, Shipping Solutions Kandla";
+
+if ($is_seo_page) {
+    $site_title = $current_seo['title'] . " | BCS";
+    $meta_desc = $current_seo['desc'];
+    $meta_keywords = $current_seo['keywords'];
+} elseif ($page !== 'home' && $page !== '404') {
+    $site_title = ucfirst($page) . " | BCS - Business Care Solutions";
+}
+
+// 7. Set the view file path
 $view_file = __DIR__ . '/views/' . $page . '.php';
 
 ?>
@@ -51,7 +116,9 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCS | Business Care Solutions</title>
+    <title><?php echo $site_title; ?></title>
+    <meta name="description" content="<?php echo $meta_desc; ?>">
+    <meta name="keywords" content="<?php echo $meta_keywords; ?>">
 
     <!-- Base URL for assets -->
     <base href="<?php echo BASE_URL; ?>">
@@ -62,6 +129,9 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +140,58 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="public/css/style.css">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="public/images/icons/icons/bcs-fav.svg">
+    <link rel="alternate icon" type="image/png" href="public/images/logo/bcslogo.png">
+    <link rel="apple-touch-icon" href="public/images/logo/bcslogo.png">
+
+    <!-- JSON-LD Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "BCS - Business Care Solutions",
+      "image": "<?php echo BASE_URL; ?>public/images/logo/logo01.png",
+      "@id": "<?php echo BASE_URL; ?>",
+      "url": "<?php echo BASE_URL; ?>",
+      "telephone": "+919925818323",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor",
+        "addressLocality": "Gandhidham",
+        "postalCode": "370201",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 23.0754,
+        "longitude": 70.1337
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/businesscaresolutions",
+        "https://www.instagram.com/business_care_solutions/",
+        "https://www.linkedin.com/company/businesscaresolutions/"
+      ]
+    }
+    </script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">

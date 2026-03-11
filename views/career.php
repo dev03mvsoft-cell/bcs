@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-lg-7 order-1 order-lg-2 mb-5 mb-lg-0">
                     <div class="staggered-layout-v2">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Growth at BCS" class="img-main rounded-5 shadow-lg">
+                        <img src="/public/images/home/35.png" alt="Growth at BCS" class="img-main rounded-5 shadow-lg">
                         <div class="floating-badge-v2">
                             <span>GROWTH</span>
                         </div>
@@ -123,7 +123,7 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="advantage-visual">
                         <div class="about-triangle-bg career-triangle"></div>
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop" alt="BCS Gandhidham" class="advantage-img shadow-lg">
+                        <img src="/public/images/home/34.png" alt="BCS Gandhidham" class="advantage-img shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
@@ -162,7 +162,7 @@
                                             </div>
                                             <div>
                                                 <small class="text-muted d-block">Email us at</small>
-                                                <span class="fw-bold">hr@bcsads.co</span>
+                                                <span class="fw-bold">hr@bcsads.com</span>
                                             </div>
                                         </div>
                                         <div class="d-flex">
@@ -173,28 +173,61 @@
                                             </div>
                                             <div>
                                                 <small class="text-muted d-block">Call us at</small>
-                                                <span class="fw-bold">+91 97148 44439</span>
+                                                <span class="fw-bold">9925 818 323</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7">
-                                <form action="#" class="premium-form">
+                                <form action="forms-handler/handler.php" method="POST" class="premium-form" id="careerForm" enctype="multipart/form-data">
+                                    <input type="hidden" name="form_type" value="career">
+                                    <input type="hidden" name="recaptcha_token" id="recaptcha_token_career">
+
+                                    <!-- Honeypot -->
+                                    <div style="display:none;">
+                                        <input type="text" name="website_hp">
+                                    </div>
                                     <div class="row g-4">
+                                        <?php if (isset($_SESSION['form_success'])): ?>
+                                            <script>
+                                                document.addEventListener('DOMContentLoaded', () => {
+                                                    Swal.fire({
+                                                        icon: 'success',
+                                                        title: 'Success!',
+                                                        text: <?php echo json_encode($_SESSION['form_success']); ?>,
+                                                        timer: 3000,
+                                                        showConfirmButton: false
+                                                    });
+                                                });
+                                            </script>
+                                            <?php unset($_SESSION['form_success']); ?>
+                                        <?php endif; ?>
+                                        <?php if (isset($_SESSION['form_error'])): ?>
+                                            <script>
+                                                document.addEventListener('DOMContentLoaded', () => {
+                                                    Swal.fire({
+                                                        icon: 'error',
+                                                        title: 'Oops...',
+                                                        text: <?php echo json_encode($_SESSION['form_error']); ?>
+                                                    });
+                                                });
+                                            </script>
+                                            <?php unset($_SESSION['form_error']); ?>
+                                        <?php endif; ?>
                                         <div class="col-md-6">
                                             <div class="form-group-custom">
-                                                <input type="text" class="form-input-premium" placeholder="Your Name" required>
+                                                <input type="text" name="name" class="form-input-premium" placeholder="Your Name" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group-custom">
-                                                <input type="email" class="form-input-premium" placeholder="Your Email" required>
+                                                <input type="email" name="email" class="form-input-premium" placeholder="Your Email" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group-custom">
-                                                <select class="form-input-premium">
+                                                <select name="interest_area" class="form-input-premium">
                                                     <option selected disabled>Area of Interest</option>
                                                     <option>Creative Design</option>
                                                     <option>Digital Strategy</option>
@@ -205,7 +238,13 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group-custom">
-                                                <textarea class="form-input-premium" rows="4" placeholder="Briefly describe your experience..."></textarea>
+                                                <textarea name="experience" class="form-input-premium" rows="4" placeholder="Briefly describe your experience..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group-custom">
+                                                <label class="text-muted mb-2 small d-block">Upload Resume (PDF/DOCX, Max 2MB)</label>
+                                                <input type="file" name="resume" id="resumeUpload" class="form-input-premium" accept=".pdf,.doc,.docx" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12 text-end">
@@ -222,9 +261,36 @@
     </section>
 </div>
 
-<!-- Scripts for Animations -->
+<!-- reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        const careerForm = document.getElementById('careerForm');
+        if (careerForm) {
+            careerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // File size check
+                const fileInput = document.getElementById('resumeUpload');
+                if (fileInput.files.length > 0) {
+                    const fileSize = fileInput.files[0].size / 1024 / 1024; // in MB
+                    if (fileSize > 2) {
+                        alert('File size exceeds 2MB. Please upload a smaller file.');
+                        return;
+                    }
+                }
+
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {
+                        action: 'career'
+                    }).then(function(token) {
+                        document.getElementById('recaptcha_token_career').value = token;
+                        careerForm.submit();
+                    });
+                });
+            });
+        }
+
         if (typeof gsap !== 'undefined') {
             gsap.to('.career-backdrop-text', {
                 x: -100,

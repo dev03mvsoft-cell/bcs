@@ -27,7 +27,7 @@
                         </p>
                         <div class="career-hero-btns">
                             <a href="#contact-form-section" class="contact-link me-3 shadow-none border-2 border-dark" style="border: 2px solid var(--dark);">Write to Us</a>
-                            <a href="tel:+919714844439" class="btn-outline-custom">Call Support</a>
+                            <a href="tel:+919925818323" class="btn-outline-custom">Call Support</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         </div>
                         <h4 class="fw-bold mb-3">Email Us</h4>
                         <p class="text-muted mb-4">Direct your inquiries to our team for a swift response.</p>
-                        <a href="mailto:info@bcsads.co" class="fw-bold text-primary text-decoration-none">info@bcsads.co</a>
+                        <a href="mailto:info@bcsads.com" class="fw-bold text-primary text-decoration-none">info@bcsads.com</a>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -77,7 +77,7 @@
                         </div>
                         <h4 class="fw-bold mb-3">Call Support</h4>
                         <p class="text-muted mb-4">Available Monday to Saturday for real-time assistance.</p>
-                        <a href="tel:+919714844439" class="fw-bold text-primary text-decoration-none">+91 97148 44439</a>
+                        <a href="tel:+919925818323" class="fw-bold text-primary text-decoration-none">+91 9925 818 323</a>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
@@ -89,8 +89,8 @@
                             </svg>
                         </div>
                         <h4 class="fw-bold mb-3">Our Office</h4>
-                        <p class="text-muted mb-4">Gandhidham, Kutch, Gujarat - The heart of digital transformation.</p>
-                        <span class="fw-bold text-primary">Get Directions →</span>
+                        <p class="text-muted mb-4">Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor, Gandhidham 370201</p>
+                        <a href="https://maps.google.com/?q=Shree+Ambika+Arcade+Gandhidham" target="_blank" class="fw-bold text-primary text-decoration-none">Get Directions →</a>
                     </div>
                 </div>
             </div>
@@ -115,19 +115,53 @@
                                 </div>
                             </div>
                             <div class="col-lg-7">
-                                <form action="#" class="premium-form">
+                            <?php if (isset($_SESSION['form_success'])): ?>
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', () => {
+                                        Swal.fire({
+                                            icon: 'success',
+                                            title: 'Success!',
+                                            text: <?php echo json_encode($_SESSION['form_success']); ?>,
+                                            timer: 3000,
+                                            showConfirmButton: false
+                                        });
+                                    });
+                                </script>
+                                <?php unset($_SESSION['form_success']); ?>
+                            <?php endif; ?>
+                            <?php if (isset($_SESSION['form_error'])): ?>
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', () => {
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: 'Oops...',
+                                            text: <?php echo json_encode($_SESSION['form_error']); ?>
+                                        });
+                                    });
+                                </script>
+                                <?php unset($_SESSION['form_error']); ?>
+                            <?php endif; ?>
+                                <form action="forms-handler/handler.php" method="POST" class="premium-form" id="contactForm">
+                                    <input type="hidden" name="form_type" value="contact">
+                                    <input type="hidden" name="recaptcha_token" id="recaptcha_token_contact">
+                                    
+                                    <!-- Honeypot -->
+                                    <div style="display:none;">
+                                        <input type="text" name="website_hp">
+                                    </div>
+
                                     <div class="row g-4">
                                         <div class="col-md-6">
-                                            <input type="text" class="form-input-premium" placeholder="Full Name" required>
+                                            <input type="text" name="name" class="form-input-premium" placeholder="Full Name" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="email" class="form-input-premium" placeholder="Work Email" required>
+                                            <input type="email" name="email" class="form-input-premium" placeholder="Work Email" required>
                                         </div>
                                         <div class="col-md-12">
-                                            <input type="text" class="form-input-premium" placeholder="Company Name (Optional)">
+                                            <input type="text" name="company" class="form-input-premium" placeholder="Company Name (Optional)">
                                         </div>
                                         <div class="col-md-12">
-                                            <textarea class="form-input-premium" rows="5" placeholder="Tell us about your project or inquiry..." required></textarea>
+                                            <textarea name="message" class="form-input-premium" rows="5" placeholder="Tell us about your project or inquiry..." required></textarea>
                                         </div>
                                         <div class="col-md-12 text-end">
                                             <button type="submit" class="contact-link px-5 py-3 border-0 bg-primary text-white shadow-lg">Send Inquiry</button>
@@ -141,11 +175,29 @@
             </div>
         </div>
     </section>
+
+    <!-- Legal Sections -->
+    <?php include __DIR__ . '/partials/legal-sections.php'; ?>
 </div>
 
-<!-- GSAP Scroll Animation -->
+
+<!-- reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'contact'}).then(function(token) {
+                        document.getElementById('recaptcha_token_contact').value = token;
+                        contactForm.submit();
+                    });
+                });
+            });
+        }
+
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             gsap.to('.contact-backdrop-text', {
                 x: -150,

@@ -23,9 +23,15 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-hero-images">
-                        <img src="public/images/about/13.png" alt="Creative Services" class="about-img-1">
-                        <img src="public/images/about/12.png" alt="Strategic Planning" class="about-img-2">
+                    <div class="about-assembly-container text-center position-relative">
+                        <!-- Base Image -->
+                        <div class="about-img-wrapper base-wrapper">
+                            <img src="/public/images/home/36.png" alt="BCS Digital Marketing Services Hub in Gandhidham" class="about-img-base img-fluid">
+                        </div>
+                        <!-- Sliding Image -->
+                        <div class="about-img-wrapper slide-wrapper about-img-slide">
+                            <img src="/public/images/home/37.png" alt="Professional SEO and Branding Agency Kutch - Business Solutions" class="img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,7 +56,7 @@
         </div>
 
         <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" id="web-development">
                 <div class="service-card-v2"
                     data-service-title="Web Development"
                     data-service-tag="Modern Web Solutions"
@@ -85,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" id="digital-transformation">
                 <div class="service-card-v2"
                     data-service-title="Digital Transformation"
                     data-service-tag="Transformation"
@@ -256,7 +262,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" id="social-media">
                 <div class="service-card-v2"
                     data-service-title="Social Media"
                     data-service-tag="Marketing"
@@ -322,7 +328,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" id="seo">
                 <div class="service-card-v2"
                     data-service-title="SEO"
                     data-service-tag="Organic Growth"
@@ -355,7 +361,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" id="branding">
                 <div class="service-card-v2"
                     data-service-title="Branding"
                     data-service-tag="Identity"
@@ -488,3 +494,9 @@
         });
     });
 </script>
+
+<!-- Semantic SEO Content (Hidden) -->
+<section style="display: none;" aria-hidden="true">
+    <h2>Digital Marketing Services in Gandhidham, Bhuj, and Kutch</h2>
+    <p>Providing expert digital marketing company services in Gandhidham and beyond. Our services include SEO, social media management, and web development for businesses in Mundra, Kandla, and Ahmedabad. We are the preferred website development company in Gandhidham for logistics and shipping industries in Kutch. From luxury branding to performance marketing, we help businesses across Gujarat grow their digital footprint.</p>
+</section>

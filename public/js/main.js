@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // About Section Entrance
   gsap.from(".about-img-slide", {
     scrollTrigger: {
-      trigger: ".about-section",
+      trigger: document.querySelector(".about-hero") ? ".about-hero" : ".about-section",
       start: "top 80%",
       toggleActions: "play none none reverse",
     },

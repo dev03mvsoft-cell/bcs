@@ -28,9 +28,15 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-hero-images">
-                        <img src="public/images/about/13.png" alt="We Work" class="about-img-1">
-                        <img src="public/images/about/12.png" alt="For You" class="about-img-2">
+                    <div class="about-assembly-container text-center position-relative">
+                        <!-- Base Image -->
+                        <div class="about-img-wrapper base-wrapper">
+                            <img src="/public/images/home/38.png" alt="Business Care Solutions Office - Digital Agency Gandhidham" class="about-img-base img-fluid">
+                        </div>
+                        <!-- Sliding Image -->
+                        <div class="about-img-wrapper slide-wrapper about-img-slide">
+                            <img src="/public/images/home/39.png" alt="Strategic Digital Transformation Team Kutch" class="img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,7 +143,7 @@
                 <div class="founder-section-v2">
                     <div class="founder-shape"></div>
                     <div class="founder-image-wrapper-v2">
-                        <img src="/public/images/logo/manoj-pradhan.jpg" alt="Founder" class="founder-img-v2">
+                        <img src="/public/images/logo/manoj-pradhan.jpg" alt="Manoj Pradhan - Founder & CEO of Business Care Solutions Gandhidham" class="founder-img-v2">
                         <div class="founder-badge">
                             <div class="badge-content">
                                 <h4>Founder & CEO</h4>
@@ -150,6 +156,34 @@
         </div>
     </div>
 </section>
+
+
+
+<section class="mvsoft-section">
+    <div class="container">
+        <div class="mvsoft-container">
+            <div class="mvsoft-logo-box" data-aos="fade-right">
+                <div class="mvsoft-logo-card">
+                    <img src="/public/images/logo/logo1.webp" alt="MVSoft Solutions Logo">
+                </div>
+            </div>
+            <div class="mvsoft-content-box" data-aos="fade-left">
+                <span class="mvsoft-badge">Technology Arm</span>
+                <h2 class="mvsoft-heading">Empowering Innovation with <span class="about-title-accent">MVSoft Solutions</span></h2>
+                <div class="mvsoft-description">
+                    <p>
+                        MVSoft Solutions is the tech arm of BCS (Business Care Solutions), focused on building innovative digital solutions for businesses. We design and develop modern websites, scalable web applications, and customized software systems using the latest technologies.
+                    </p>
+                    <p>
+                        Our team combines modern development frameworks, creative design, and smart automation to help businesses enhance their digital presence and streamline their workflows. At MVSoft Solutions, we transform ideas into powerful digital experiences that support business growth in the modern digital world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 <section class="impact-stats">
@@ -172,6 +206,7 @@
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
                         </div>
+
                         <div class="stat-number"><span class="counter" data-target="1600">0</span>+</div>
                         <div class="stat-label">Services Provided</div>
                     </div>
@@ -234,7 +269,7 @@
             <!-- First Set of Logos -->
             <?php for ($i = 1; $i <= 15; $i++) : ?>
                 <div class="client-card">
-                    <img src="/public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png" alt="">
+                    <img src="/public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png" alt="Trusted Partner Logo <?php echo $i; ?> - BCS Digital Excellence">
                 </div>
             <?php endfor; ?>
 
@@ -314,3 +349,6 @@
         </div>
     </div>
 </section>
+
+<!-- Legal Sections -->
+<?php include __DIR__ . '/partials/legal-sections.php'; ?>
