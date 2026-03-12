@@ -33,13 +33,13 @@
                         <div class="hero-card">
                             <!-- ... existing card content ... -->
                             <div class="hero-card-header d-flex align-items-center mb-4">
-                                <span class="hero-card-logo me-2">
+                                <!-- <span class="hero-card-logo me-2">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary)" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         <path d="M2 17L12 22L22 17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         <path d="M2 12L12 17L22 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                </span>
+                                </span> -->
                                 <span class="hero-card-brand">Business Care Solutions</span>
                             </div>
 
