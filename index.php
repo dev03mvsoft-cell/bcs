@@ -119,6 +119,22 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
     <title><?php echo $site_title; ?></title>
     <meta name="description" content="<?php echo $meta_desc; ?>">
     <meta name="keywords" content="<?php echo $meta_keywords; ?>">
+    <link rel="canonical" href="<?php echo BASE_URL . $route; ?>">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo BASE_URL . $route; ?>">
+    <meta property="og:title" content="<?php echo $site_title; ?>">
+    <meta property="og:description" content="<?php echo $meta_desc; ?>">
+    <meta property="og:image" content="<?php echo BASE_URL; ?>public/images/logo/logo01.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<?php echo BASE_URL . $route; ?>">
+    <meta property="twitter:title" content="<?php echo $site_title; ?>">
+    <meta property="twitter:description" content="<?php echo $meta_desc; ?>">
+    <meta property="twitter:image" content="<?php echo BASE_URL; ?>public/images/logo/logo01.png">
 
     <!-- Base URL for assets -->
     <base href="<?php echo BASE_URL; ?>">
