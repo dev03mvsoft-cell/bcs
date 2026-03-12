@@ -19,7 +19,7 @@ session_start();
 
 // --- CONFIGURATION ---
 // reCAPTCHA v3 Keys (Replace with your own keys)
-$recaptcha_secret_key = 'YOUR_RECAPTCHA_SECRET_KEY';
+$recaptcha_secret_key = '6LeJHIcsAAAAAJ0PRnzIn4S8_ZJZvsVj9dYbuksN';
 
 // SMTP Configuration (Provided by user)
 $smtp_host = 'smtp.gmail.com';
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <tr><td><strong>Name:</strong></td><td>" . htmlspecialchars($_POST['name']) . "</td></tr>
             <tr><td><strong>Email:</strong></td><td>" . htmlspecialchars($_POST['email']) . "</td></tr>
             <tr><td><strong>Company:</strong></td><td>" . htmlspecialchars($_POST['company']) . "</td></tr>
-            <tr><td><strong>Employees:</strong></td><td>" . htmlspecialchars($_POST['employees']) . "</td></tr>
+            <tr><td><strong>Employees:</strong></td><td>" . htmlspecialchars($_POST['employees'] ?? 'N/A') . "</td></tr>
             <tr><td><strong>Problem Statement:</strong></td><td>" . nl2br(htmlspecialchars($_POST['problem'])) . "</td></tr>";
         }
 

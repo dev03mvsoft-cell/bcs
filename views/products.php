@@ -572,151 +572,6 @@
             grid-template-columns: 1fr;
         }
     }
-
-    /* Inquiry Modal Styles */
-    .inquiry-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(15, 23, 42, 0.7);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        z-index: 2000;
-        align-items: flex-start;
-        /* Better for long forms on mobile */
-        justify-content: center;
-        padding: 20px;
-        overflow-y: auto;
-        /* Enable scroll for long forms */
-    }
-
-    .modal-content-card {
-        background: #fff;
-        width: 100%;
-        max-width: 550px;
-        border-radius: 30px;
-        position: relative;
-        padding: 3rem;
-        margin: auto;
-        /* Center vertically if space allows */
-        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
-        animation: modalScale 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes modalScale {
-        from {
-            transform: scale(0.9);
-            opacity: 0;
-        }
-
-        to {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    .modal-close-btn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: #f1f5f9;
-        border: none;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #64748b;
-        transition: all 0.3s ease;
-        z-index: 10;
-    }
-
-    .modal-close-btn:hover {
-        background: var(--primary);
-        color: #fff;
-        transform: rotate(90deg);
-    }
-
-    .inquiry-form-group {
-        margin-bottom: 1.25rem;
-    }
-
-    .inquiry-label {
-        display: block;
-        font-weight: 700;
-        color: var(--dark);
-        margin-bottom: 0.5rem;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .inquiry-input {
-        width: 100%;
-        padding: 0.85rem 1.1rem;
-        background: #f8fafc;
-        border: 2px solid #f1f5f9;
-        border-radius: 12px;
-        color: var(--dark);
-        font-weight: 500;
-        transition: all 0.3s ease;
-        font-size: 1rem;
-    }
-
-    .inquiry-input:focus {
-        outline: none;
-        border-color: var(--primary-light);
-        background: #fff;
-        box-shadow: 0 0 0 4px rgba(0, 46, 142, 0.05);
-    }
-
-    .submit-inquiry-btn {
-        width: 100%;
-        padding: 1.1rem;
-        background: var(--primary);
-        color: #fff;
-        border: none;
-        border-radius: 15px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 0.5rem;
-        font-size: 0.95rem;
-    }
-
-    .submit-inquiry-btn:hover {
-        background: var(--dark);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Mobile Responsive Adjustments */
-    @media (max-width: 576px) {
-        .inquiry-modal {
-            padding: 15px;
-        }
-
-        .modal-content-card {
-            padding: 2.5rem 1.5rem 2rem;
-            border-radius: 20px;
-        }
-
-        .modal-header-text h3 {
-            font-size: 1.5rem;
-        }
-
-        .modal-close-btn {
-            top: 15px;
-            right: 15px;
-        }
-    }
 </style>
 
 <!-- Hero Section -->
@@ -730,7 +585,7 @@
                     <p class="product-desc">Empower your organization with precision-engineered digital tools. Our suite of professional solutions is designed to optimize operational workflows, mitigate risks, and accelerate your digital transformation journey.</p>
                     <div class="hero-btns mt-4 d-flex gap-3 flex-wrap">
                         <a href="contact" class="btn btn-primary px-5 py-3">Schedule a Strategy Call</a>
-                        <a href="#saas" class="btn btn-outline-dark px-5 py-3 rounded-pill border-2 fw-bold">Explore Solutions</a>
+                        <a href="products#vessel-booking" class="btn btn-outline-dark px-5 py-3 rounded-pill border-2 fw-bold">Explore Solutions</a>
                     </div>
                 </div>
             </div>
@@ -754,6 +609,17 @@
     </div>
 </section>
 
+<!-- Sub-navigation for Products -->
+<nav class="product-sub-nav">
+    <div class="container">
+        <div class="sub-nav-container">
+            <a href="products#vessel-booking" class="sub-nav-link active">Vessel Booking</a>
+            <a href="products#wsd-connect" class="sub-nav-link">WSD Connect</a>
+            <a href="products#pagemora" class="sub-nav-link">Pagemora</a>
+        </div>
+    </div>
+</nav>
+
 
 <!-- Vessel Booking Portal Section -->
 <section id="vessel-booking" class="product-section">
@@ -761,7 +627,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 product-info-content">
                 <div class="product-branding d-flex align-items-center gap-3 mb-4">
-                    <img src="/public/images/logo/logo01.png" alt="Superworks Logo" style="height: 45px; width: auto; object-fit: contain;">
+                    <img src="public/images/logo/logo01.png" alt="Superworks Logo" style="height: 45px; width: auto; object-fit: contain;">
                     <span class="product-badge mb-0">Flagship Solution</span>
                 </div>
 
@@ -829,7 +695,7 @@
             <div class="col-lg-6 mt-5 mt-lg-0">
                 <div class="product-mockup-wrap">
                     <!-- Main Dashboard Image - Placeholder for User -->
-                    <img src="/public/images/serivepage/BCS.png" alt="Vessel Booking Dashboard" class="product-mockup-img" style="min-height: 400px;">
+                    <img src="public/images/serivepage/BCS.png" alt="Vessel Booking Dashboard" class="product-mockup-img" style="min-height: 400px;">
 
                     <!-- Premium Overlays -->
                     <div class="floating-ui d-none d-md-flex" style="top: 10%; right: -5%; border-left: 4px solid #002e8e;">
@@ -853,84 +719,85 @@
     </div>
 </section>
 
-<!-- HRMS & Workforce Management Section -->
-<section id="hrms-solutions" class="product-section">
+<!-- WSD Connect (World Shipping Directory) Section -->
+<section id="wsd-connect" class="product-section">
     <div class="container">
         <div class="row align-items-center flex-row-reverse">
             <div class="col-lg-6 product-info-content">
                 <div class="product-branding d-flex align-items-center gap-3 mb-4">
-                    <img src="public/images/logo/superworks-logo.webp" alt="Superworks Logo" style="height: 45px; width: auto; object-fit: contain;">
-                    <span class="product-badge mb-0">Strategic Partnership</span>
+                    <img src="public/images/logo/cropped-WSD-Logo-png.webp" alt="BCS Logo" style="height: 100px; width: auto; object-fit: contain;">
+                    <span class="product-badge mb-0">Own Product</span>
                 </div>
 
-                <h2 class="product-title">HR & Workforce <span class="text-primary">Management</span></h2>
+                <h2 class="product-title">WSD <span class="text-primary">Connect</span></h2>
                 <p class="product-desc">
-                    We provide modern HR and workforce management solutions specifically tailored for businesses across Kutch, Gujarat. Through our strategic partnership with Superworks, we deliver advanced HRMS technology to help organizations streamline and digitize their entire HR lifecycle.
+                    WSD Connect (World Shipping Directory) is a global online platform developed by BCS to create a digital network for the shipping and logistics community. It streamlines how businesses discover services, build connections, and expand their reach in the maritime industry.
                 </p>
 
                 <div class="feature-grid mb-5">
                     <div class="feature-item">
                         <div class="feature-check"><i class="fas fa-check"></i></div>
                         <div class="feature-content">
-                            <span class="feature-text text-dark">Employee Management</span>
+                            <span class="feature-text text-dark">Global Shipping Directory</span>
                         </div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-check"><i class="fas fa-check"></i></div>
                         <div class="feature-content">
-                            <span class="feature-text text-dark">Payroll Processing</span>
+                            <span class="feature-text text-dark">Logistics Networking</span>
                         </div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-check"><i class="fas fa-check"></i></div>
                         <div class="feature-content">
-                            <span class="feature-text text-dark">Attendance Tracking</span>
+                            <span class="feature-text text-dark">Service Showcasing</span>
                         </div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-check"><i class="fas fa-check"></i></div>
                         <div class="feature-content">
-                            <span class="feature-text text-dark">Recruitment Tools</span>
+                            <span class="feature-text text-dark">Regional Port Focus</span>
                         </div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-check"><i class="fas fa-check"></i></div>
                         <div class="feature-content">
-                            <span class="feature-text text-dark">Team Collaboration</span>
+                            <span class="feature-text text-dark">Digital Maritime Network</span>
                         </div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-check"><i class="fas fa-check"></i></div>
                         <div class="feature-content">
-                            <span class="feature-text text-dark">SME Optimized</span>
+                            <span class="feature-text text-dark">Strategic Connectivity</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="hero-btns d-flex gap-3 flex-wrap">
                     <button type="button" class="btn btn-primary px-5 py-3 shadow-lg open-inquiry-modal">Send Inquiry <i class="fas fa-paper-plane ms-2"></i></button>
+                    <a href="https://wsdconnect.com/" target="_blank" class="btn btn-outline-dark px-5 py-3">Explore Directory</a>
                 </div>
             </div>
 
             <div class="col-lg-6 mt-5 mt-lg-0">
                 <div class="product-mockup-wrap">
-                    <!-- Main HRMS Image - Placeholder for User -->
-                    <img src="/public/images/serivepage/service.png" alt="HRMS & Workforce Dashboard" class="product-mockup-img" style="min-height: 400px;">
+                    <!-- Main WSD Image -->
+                    <img src="public/images/serivepage/service.png" alt="WSD Connect Platform" class="product-mockup-img" style="min-height: 400px;">
 
                     <!-- Premium Overlays -->
                     <div class="floating-ui d-none d-md-flex" style="top: 15%; left: -5%; border-left: 4px solid #3b82f6;">
-                        <div class="ui-icon text-primary"><i class="fas fa-users"></i></div>
+                        <div class="ui-icon text-primary"><i class="fas fa-globe"></i></div>
                         <div class="ui-text">
-                            <div class="small opacity-75">Workforce</div>
-                            <div class="fw-bold">Seamless Tracking</div>
+                            <div class="small opacity-75">Global Reach</div>
+                            <div class="fw-bold">World Shipping Directory</div>
                         </div>
                     </div>
 
                     <div class="floating-ui d-none d-md-flex" style="bottom: 10%; right: -5%; border-left: 4px solid #8b5cf6;">
-                        <div class="ui-icon text-info"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <div class="ui-icon text-info"><i class="fas fa-anchor"></i></div>
                         <div class="ui-text">
-                            <div class="small opacity-75">Payroll</div>
-                            <div class="fw-bold">Auto-Processing</div>
+                            <div class="small opacity-75">Maritime Network</div>
+                            <div class="fw-bold">Trusted Providers</div>
                         </div>
                     </div>
                 </div>
@@ -938,6 +805,94 @@
         </div>
     </div>
 </section>
+
+<!-- Pagemora - Digital Flipbook Platform Section -->
+<section id="pagemora" class="product-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 product-info-content">
+                <div class="product-branding d-flex align-items-center gap-3 mb-4">
+                    <img src="public/images/logo/pagemora-logo.webp" alt="BCS Logo" style="height: 45px; width: auto; object-fit: contain;">
+                    <span class="product-badge mb-0">Own Product</span>
+                </div>
+
+                <h2 class="product-title">Pagemora <span class="text-primary">Flipbooks</span></h2>
+                <p class="product-desc">
+                    Pagemora is an advanced online platform that transforms static PDF documents into interactive digital flipbooks. It enables businesses to present catalogs, brochures, and magazines in a captivating page-flip format that enhances engagement across all digital platforms.
+                </p>
+
+                <div class="feature-grid mb-5">
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-check"></i></div>
+                        <div class="feature-content">
+                            <span class="feature-text text-dark">Interactive Page-Turn Effect</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-check"></i></div>
+                        <div class="feature-content">
+                            <span class="feature-text text-dark">Instant PDF Conversion</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-check"></i></div>
+                        <div class="feature-content">
+                            <span class="feature-text text-dark">Mobile-First Responsive Design</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-check"></i></div>
+                        <div class="feature-content">
+                            <span class="feature-text text-dark">Custom Branding Options</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-check"></i></div>
+                        <div class="feature-content">
+                            <span class="feature-text text-dark">Digital Portfolio Display</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-check"></i></div>
+                        <div class="feature-content">
+                            <span class="feature-text text-dark">Interactive Media Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-btns d-flex gap-3 flex-wrap">
+                    <button type="button" class="btn btn-primary px-5 py-3 shadow-lg open-inquiry-modal">Send Inquiry <i class="fas fa-paper-plane ms-2"></i></button>
+                    <a href="https://pagemora.com/" class="btn btn-outline-dark px-5 py-3" target="_blank">View Demo</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="product-mockup-wrap">
+                    <!-- Main Pagemora Image - Placeholder for User -->
+                    <img src="public/images/logo/flipbook.jpg" alt="Pagemora Flipbook Platform" class="product-mockup-img" style="min-height: 400px;">
+
+                    <!-- Premium Overlays -->
+                    <div class="floating-ui d-none d-md-flex" style="top: 20%; right: -5%; border-left: 4px solid #f59e0b;">
+                        <div class="ui-icon text-warning"><i class="fas fa-book-open"></i></div>
+                        <div class="ui-text">
+                            <div class="small opacity-75">Interactive</div>
+                            <div class="fw-bold">Real-life Page Flip</div>
+                        </div>
+                    </div>
+
+                    <div class="floating-ui d-none d-md-flex" style="bottom: 15%; left: -5%; border-left: 4px solid #10b981;">
+                        <div class="ui-icon text-success"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="ui-text">
+                            <div class="small opacity-75">Omnichannel</div>
+                            <div class="fw-bold">Web & Mobile Ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Comparison / Why BCS -->
 
 
@@ -1039,139 +994,7 @@
             });
         }
 
-        // Inquiry Modal Logic
-        const inquiryModal = document.getElementById('inquiryModal');
-        const openModalBtns = document.querySelectorAll('.open-inquiry-modal');
-        const closeModalBtn = document.getElementById('closeInquiryModal');
-
-        if (inquiryModal && openModalBtns.length > 0) {
-            openModalBtns.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    inquiryModal.style.display = 'flex';
-                    document.body.style.overflow = 'hidden'; // Prevent scroll
-                });
-            });
-
-            closeModalBtn.addEventListener('click', () => {
-                inquiryModal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Restore scroll
-            });
-
-            window.addEventListener('click', (e) => {
-                if (e.target === inquiryModal) {
-                    inquiryModal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        }
     });
 </script>
 
-<!-- reCAPTCHA v3 -->
-<script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // ... (rest of the script)
-        // Updating productInquiryForm submit logic to handle reCAPTCHA
-        const inquiryForm = document.getElementById('productInquiryForm');
-        if (inquiryForm) {
-            inquiryForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const submitBtn = inquiryForm.querySelector('.submit-inquiry-btn');
-                const originalText = submitBtn.innerHTML;
-
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Processing...';
-                submitBtn.disabled = true;
-
-                grecaptcha.ready(function() {
-                    grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'product_inquiry'}).then(function(token) {
-                        document.getElementById('recaptcha_token_product').value = token;
-                        inquiryForm.submit();
-                    });
-                });
-            });
-        }
-
-        // Only keep modal open on error (so user can fix details)
-        <?php if (isset($_SESSION['form_error'])): ?>
-            const inquiryModal = document.getElementById('inquiryModal');
-            if (inquiryModal) {
-                inquiryModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            }
-        <?php endif; ?>
-    });
-</script>
-
-<!-- Inquiry Modal Structure -->
-<div class="inquiry-modal" id="inquiryModal">
-    <div class="modal-content-card">
-        <button class="modal-close-btn" id="closeInquiryModal">
-            <i class="fas fa-times"></i>
-        </button>
-
-        <div class="modal-header-text mb-4 text-center">
-            <h3 class="fw-bold text-dark mb-2">Product Inquiry</h3>
-            <p class="text-muted small">Please provide your details and we'll reach out to you.</p>
-        </div>
-
-        <?php if (isset($_SESSION['form_success'])): ?>
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success!',
-                        text: <?php echo json_encode($_SESSION['form_success']); ?>,
-                        timer: 3000,
-                        showConfirmButton: false
-                    });
-                });
-            </script>
-            <?php unset($_SESSION['form_success']); ?>
-        <?php endif; ?>
-        <?php if (isset($_SESSION['form_error'])): ?>
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: <?php echo json_encode($_SESSION['form_error']); ?>
-                    });
-                });
-            </script>
-            <?php unset($_SESSION['form_error']); ?>
-        <?php endif; ?>
-        <form id="productInquiryForm" action="forms-handler/handler.php" method="POST">
-            <input type="hidden" name="form_type" value="product_inquiry">
-            <input type="hidden" name="recaptcha_token" id="recaptcha_token_product">
-
-            <!-- Honeypot -->
-            <div style="display:none;">
-                <input type="text" name="website_hp">
-            </div>
-
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Full Name</label>
-                <input type="text" name="name" class="inquiry-input" placeholder="e.g. John Doe" required>
-            </div>
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Work Email</label>
-                <input type="email" name="email" class="inquiry-input" placeholder="e.g. john@company.com" required>
-            </div>
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Company Name</label>
-                <input type="text" name="company" class="inquiry-input" placeholder="e.g. Acme Corp" required>
-            </div>
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Total Employees</label>
-                <input type="number" name="employees" class="inquiry-input" placeholder="e.g. 50" required>
-            </div>
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Tell Us the Problem</label>
-                <textarea name="problem" class="inquiry-input" rows="4" placeholder="Describe the challenges you're facing..." required></textarea>
-            </div>
-            <button type="submit" class="submit-inquiry-btn">Submit Inquiry</button>
-        </form>
-    </div>
-</div>
+<?php include __DIR__ . '/partials/inquiry-modal.php'; ?>

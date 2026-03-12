@@ -72,7 +72,16 @@
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
                     </div>
-                    <div class="footer-contact-text"> Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor, Gandhidham 370201</div>
+                    <div class="footer-contact-text"><strong>Gandhidham:</strong> Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor, 370201</div>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="footer-contact-text"><strong>Ahmedabad:</strong> 5th Floor Office no 14-F, Kalapurnam Complex, Navrangpura, 380009</div>
                 </div>
                 <div class="footer-contact-item">
                     <div class="footer-contact-icon">
@@ -96,12 +105,7 @@
                         <a href="mailto:info@bcsads.com" class="text-decoration-none text-reset">info@bcsads.com</a>
                     </div>
                 </div>
-                <div class="footer-newsletter mt-4">
-                    <form action="#">
-                        <input type="email" class="form-control" placeholder="Your Email Address" required>
-                        <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100 mt-2">Subscribe</button>
-                    </form>
-                </div>
+
             </div>
         </div>
 
@@ -121,3 +125,8 @@
         </div>
     </div>
 </footer>
+
+<!-- Left Side WhatsApp Badge (Ticket Style) -->
+<a href="https://wa.me/919925818323" class="whatsapp-badge-ticket" target="_blank">
+    <span class="whatsapp-text">Whatsapp</span>
+</a>

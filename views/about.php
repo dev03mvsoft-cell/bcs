@@ -31,11 +31,11 @@
                     <div class="about-assembly-container text-center position-relative">
                         <!-- Base Image -->
                         <div class="about-img-wrapper base-wrapper">
-                            <img src="/public/images/home/38.png" alt="Business Care Solutions Office - Digital Agency Gandhidham" class="about-img-base img-fluid">
+                            <img src="public/images/home/38.png" alt="Business Care Solutions Office - Digital Agency Gandhidham" class="about-img-base img-fluid">
                         </div>
                         <!-- Sliding Image -->
                         <div class="about-img-wrapper slide-wrapper about-img-slide">
-                            <img src="/public/images/home/39.png" alt="Strategic Digital Transformation Team Kutch" class="img-fluid">
+                            <img src="public/images/home/39.png" alt="Strategic Digital Transformation Team Kutch" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                 <div class="founder-section-v2">
                     <div class="founder-shape"></div>
                     <div class="founder-image-wrapper-v2">
-                        <img src="/public/images/logo/manoj-pradhan.jpg" alt="Manoj Pradhan - Founder & CEO of Business Care Solutions Gandhidham" class="founder-img-v2">
+                        <img src="public/images/logo/manoj-pradhan.jpg" alt="Manoj Pradhan - Founder & CEO of Business Care Solutions Gandhidham" class="founder-img-v2">
                         <div class="founder-badge">
                             <div class="badge-content">
                                 <h4>Founder & CEO</h4>
@@ -164,7 +164,7 @@
         <div class="mvsoft-container">
             <div class="mvsoft-logo-box" data-aos="fade-right">
                 <div class="mvsoft-logo-card">
-                    <img src="/public/images/logo/logo1.webp" alt="MVSoft Solutions Logo">
+                    <img src="public/images/logo/logo1.webp" alt="MVSoft Solutions Logo">
                 </div>
             </div>
             <div class="mvsoft-content-box" data-aos="fade-left">
@@ -269,14 +269,14 @@
             <!-- First Set of Logos -->
             <?php for ($i = 1; $i <= 15; $i++) : ?>
                 <div class="client-card">
-                    <img src="/public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png" alt="Trusted Partner Logo <?php echo $i; ?> - BCS Digital Excellence">
+                    <img src="public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png" alt="Trusted Partner Logo <?php echo $i; ?> - BCS Digital Excellence">
                 </div>
             <?php endfor; ?>
 
             <!-- Duplicate for Infinite Loop -->
             <?php for ($i = 1; $i <= 15; $i++) : ?>
                 <div class="client-card">
-                    <img src="/public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png" alt="">
+                    <img src="public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png" alt="">
                 </div>
             <?php endfor; ?>
         </div>

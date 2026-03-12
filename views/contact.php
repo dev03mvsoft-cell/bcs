@@ -35,13 +35,13 @@
                     <div class="career-hero-visual-v2">
                         <div class="staggered-images">
                             <div class="image-box box-1" data-aos="fade-left" data-aos-delay="200">
-                                <img src="/public/images/home/bcshome16.jpg" alt="BCS Office">
+                                <img src="public/images/home/bcshome16.jpg" alt="BCS Office">
                             </div>
                             <div class="image-box box-2" data-aos="fade-left" data-aos-delay="400">
-                                <img src="/public/images/home/bcshome17.jpg" alt="Contact Us">
+                                <img src="public/images/home/bcshome17.jpg" alt="Contact Us">
                             </div>
                             <div class="image-box box-3" data-aos="fade-left" data-aos-delay="600">
-                                <img src="/public/images/home/bcshome9.jpg" alt="Collaboration">
+                                <img src="public/images/home/bcshome9.jpg" alt="Collaboration">
                             </div>
                         </div>
                     </div>
@@ -88,9 +88,16 @@
                                 <circle cx="12" cy="10" r="3" />
                             </svg>
                         </div>
-                        <h4 class="fw-bold mb-3">Our Office</h4>
-                        <p class="text-muted mb-4">Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor, Gandhidham 370201</p>
-                        <a href="https://maps.google.com/?q=Shree+Ambika+Arcade+Gandhidham" target="_blank" class="fw-bold text-primary text-decoration-none">Get Directions →</a>
+                        <h4 class="fw-bold mb-3">Our Offices</h4>
+                        <div class="address-item mb-3 pb-3 border-bottom border-light">
+                            <h6 class="fw-bold small text-primary mb-1">Head Office (Gandhidham)</h6>
+                            <p class="text-muted small mb-0">Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor, 370201</p>
+                        </div>
+                        <div class="address-item mb-4">
+                            <h6 class="fw-bold small text-primary mb-1">Ahmedabad Branch</h6>
+                            <p class="text-muted small mb-0">5th Floor Office no 14-F, Kalapurnam Complex, Navrangpura, 380009</p>
+                        </div>
+                        <a href="https://maps.google.com/?q=Business+Care+Solutions+Gandhidham" target="_blank" class="fw-bold text-primary text-decoration-none">Get Directions →</a>
                     </div>
                 </div>
             </div>
@@ -182,7 +189,7 @@
 
 
 <!-- reCAPTCHA v3 -->
-<script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeJHIcsAAAAAGZDDlV4F4QOdIW7__5j7qEEg455"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const contactForm = document.getElementById('contactForm');
@@ -190,7 +197,7 @@
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 grecaptcha.ready(function() {
-                    grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'contact'}).then(function(token) {
+                    grecaptcha.execute('6LeJHIcsAAAAAGZDDlV4F4QOdIW7__5j7qEEg455', {action: 'contact'}).then(function(token) {
                         document.getElementById('recaptcha_token_contact').value = token;
                         contactForm.submit();
                     });

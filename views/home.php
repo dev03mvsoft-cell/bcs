@@ -6,22 +6,22 @@
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="hero-bg-img">
-                            <video autoplay muted loop playsinline poster="/public/images/home/14.jpg" class="hero-bg-video">
-                                <source src="/public/images/home/bcshomevideo.mp4" type="video/mp4">
+                            <video autoplay muted loop playsinline poster="public/images/home/14.jpg" class="hero-bg-video">
+                                <source src="public/images/home/bcshomevideo.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                     <!-- Slide 2 -->
                     <!-- <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('/public/images/home/15.jpg');"></div>
+                        <div class="hero-bg-img" style="background-image: url('public/images/home/15.jpg');"></div>
                     </div> -->
                     <!-- Slide 3 -->
                     <!-- <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('/public/images/home/16.jpg');"></div>
+                        <div class="hero-bg-img" style="background-image: url('public/images/home/16.jpg');"></div>
                     </div> -->
                     <!-- Slide 4 -->
                     <!-- <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('/public/images/home/17.jpg');"></div>
+                        <div class="hero-bg-img" style="background-image: url('public/images/home/17.jpg');"></div>
                     </div> -->
                 </div>
             </div>
@@ -50,7 +50,7 @@
                                     <div class="swiper-slide">
                                         <div class="hero-slide-content">
                                             <div class="hero-text-mask">
-                                                <h1 class="hero-headline text-dark mb-4">Precision-Driven <br>Marketing Solutions</h1>
+                                                <h1 class="hero-headline text-dark mb-4">Designing Powerful <br>Web Experiences</h1>
                                             </div>
                                             <div class="hero-text-mask">
                                                 <p class="hero-subtext text-muted mb-5">Empowering your brand with modern visual strategies and high-impact digital campaigns.</p>
@@ -58,7 +58,7 @@
                                         </div>
                                     </div>
                                     <!-- Slide 2 -->
-                                    <div class="swiper-slide">
+                                    <!-- <div class="swiper-slide">
                                         <div class="hero-slide-content">
                                             <div class="hero-text-mask">
                                                 <h1 class="hero-headline text-dark mb-4">Innovative <br>Creative Design</h1>
@@ -67,9 +67,9 @@
                                                 <p class="hero-subtext text-muted mb-5">Bringing your ideas to life with state-of-the-art aesthetics and functional beauty.</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- Slide 3 -->
-                                    <div class="swiper-slide">
+                                    <!-- <div class="swiper-slide">
                                         <div class="hero-slide-content">
                                             <div class="hero-text-mask">
                                                 <h1 class="hero-headline text-dark mb-4">Strategic <br>Brand Growth</h1>
@@ -78,9 +78,9 @@
                                                 <p class="hero-subtext text-muted mb-5">Scaling your business through data-backed insights and market-leading techniques.</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- Slide 4 -->
-                                    <div class="swiper-slide">
+                                    <!-- <div class="swiper-slide">
                                         <div class="hero-slide-content">
                                             <div class="hero-text-mask">
                                                 <h1 class="hero-headline text-dark mb-4">Digital <br>Transformation</h1>
@@ -89,12 +89,12 @@
                                                 <p class="hero-subtext text-muted mb-5">Modernizing your presence for the next generation of digital consumers.</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 
                             <div class="hero-cta-wrapper">
-                                <a href="#contact" class="btn btn-cyan btn-lg px-5 py-3 magnetic-item">LET'S BEGIN</a>
+                                <a href="#" class="btn btn-cyan btn-lg px-5 py-3 magnetic-item open-inquiry-modal" data-bs-target="#inquiryModal">LET'S BEGIN</a>
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                             <p class="text-muted mb-4">
                                 From creative design to strategic brand growth, we ensure your business stays ahead in the ever-evolving market.
                             </p>
-                            <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">Start Your Transformation</a>
+                            <a href="<?php echo BASE_URL; ?>about" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">Start Your Transformation</a>
                         </div>
                     </div>
 
@@ -270,10 +270,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Premium Digital Advertising Agency Gandhidham">
+                                            <img src="public/images/serivepage/12.png" alt="Premium Digital Advertising Agency Gandhidham">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Creative Ad Campaigns Kutch">
+                                            <img src="public/images/serivepage/13.png" alt="Creative Ad Campaigns Kutch">
                                         </div>
                                     </div>
                                 </div>
@@ -286,7 +286,7 @@
                                         <li><span class="feat-icon">&#10003;</span> A/B testing &amp; continuous optimisation</li>
                                         <li><span class="feat-icon">&#10003;</span> Full-funnel creative production</li>
                                     </ul>
-                                    <a href="services.php" class="help-panel-cta">Explore Advertising <span>&rarr;</span></a>
+                                    <a href="<?php echo BASE_URL; ?>services" class="help-panel-cta">Explore Advertising <span>&rarr;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -297,10 +297,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="High Performance SEO Services India">
+                                            <img src="public/images/serivepage/18.png" alt="High Performance SEO Services India">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="ROI Driven Digital Marketing">
+                                            <img src="public/images/serivepage/19.png" alt="ROI Driven Digital Marketing">
                                         </div>
                                     </div>
                                 </div>
@@ -313,7 +313,7 @@
                                         <li><span class="feat-icon">&#10003;</span> Real-time analytics dashboards</li>
                                         <li><span class="feat-icon">&#10003;</span> Conversion rate optimisation (CRO)</li>
                                     </ul>
-                                    <a href="services.php" class="help-panel-cta">Explore Performance <span>&rarr;</span></a>
+                                    <a href="<?php echo BASE_URL; ?>services" class="help-panel-cta">Explore Performance <span>&rarr;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -324,10 +324,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Top Search Engine Optimization Company">
+                                            <img src="public/images/serivepage/14.png" alt="Top Search Engine Optimization Company">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Local SEO Gandhidham - BCS">
+                                            <img src="public/images/serivepage/15.png" alt="Local SEO Gandhidham - BCS">
                                         </div>
                                     </div>
                                 </div>
@@ -340,7 +340,7 @@
                                         <li><span class="feat-icon">&#10003;</span> Keyword strategy &amp; competitor analysis</li>
                                         <li><span class="feat-icon">&#10003;</span> High-authority link building</li>
                                     </ul>
-                                    <a href="services.php" class="help-panel-cta">Explore SEO <span>&rarr;</span></a>
+                                    <a href="<?php echo BASE_URL; ?>services" class="help-panel-cta">Explore SEO <span>&rarr;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -351,10 +351,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Professional Content Strategy Kutch">
+                                            <img src="public/images/serivepage/16.png" alt="Professional Content Strategy Kutch">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Creative Copywriting Bureau">
+                                            <img src="public/images/serivepage/17.png" alt="Creative Copywriting Bureau">
                                         </div>
                                     </div>
                                 </div>
@@ -367,7 +367,7 @@
                                         <li><span class="feat-icon">&#10003;</span> Brand voice &amp; editorial strategy</li>
                                         <li><span class="feat-icon">&#10003;</span> Content calendars &amp; distribution</li>
                                     </ul>
-                                    <a href="services.php" class="help-panel-cta">Explore Content <span>&rarr;</span></a>
+                                    <a href="<?php echo BASE_URL; ?>services" class="help-panel-cta">Explore Content <span>&rarr;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -378,10 +378,10 @@
                                 <div class="col-lg-5">
                                     <div class="help-panel-assembly">
                                         <div class="panel-part panel-part-left">
-                                            <img src="public/images/serivepage/serivepage.png" alt="Social Media Management Agency Gandhidham">
+                                            <img src="public/images/serivepage/16.png" alt="Social Media Management Agency Gandhidham">
                                         </div>
                                         <div class="panel-part panel-part-right">
-                                            <img src="public/images/serivepage/serivepage1.png" alt="Instagram and Facebook Ad Experts">
+                                            <img src="public/images/serivepage/17.png" alt="Instagram and Facebook Ad Experts">
                                         </div>
                                     </div>
                                 </div>
@@ -394,7 +394,7 @@
                                         <li><span class="feat-icon">&#10003;</span> Organic content &amp; reel creation</li>
                                         <li><span class="feat-icon">&#10003;</span> Community management &amp; growth hacking</li>
                                     </ul>
-                                    <a href="services.php" class="help-panel-cta">Explore Social Media <span>&rarr;</span></a>
+                                    <a href="<?php echo BASE_URL; ?>services" class="help-panel-cta">Explore Social Media <span>&rarr;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -421,7 +421,7 @@
                                         <li><span class="feat-icon">&#10003;</span> E-commerce &amp; custom web development</li>
                                         <li><span class="feat-icon">&#10003;</span> SEO-ready, fast-loading builds</li>
                                     </ul>
-                                    <a href="services.php" class="help-panel-cta">Explore Web Design <span>&rarr;</span></a>
+                                    <a href="<?php echo BASE_URL; ?>services" class="help-panel-cta">Explore Web Design <span>&rarr;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -473,6 +473,12 @@
                                         <span class="hrms-feature-icon"><i class="fas fa-mobile-alt"></i></span>
                                         <span>Mobile-First Access</span>
                                     </div>
+                                </div>
+
+                                <div class="mt-5">
+                                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-lg open-inquiry-modal">
+                                        <i class="fas fa-paper-plane me-2"></i> Inquiry Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -565,6 +571,58 @@
                         <div class="carousel-item" style="--i: 18;">
                             <img src="public/images/bcswork/bcsWork18.jpg" alt="Creative Visual Showcase 18">
                         </div>
+                        <div class="carousel-item" style="--i: 19;">
+                            <img src="public/images/bcswork/bcsWork19.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 20;">
+                            <img src="public/images/bcswork/bcsWork20.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 21;">
+                            <img src="public/images/bcswork/bcsWork21.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 22;">
+                            <img src="public/images/bcswork/bcsWork22.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 23;">
+                            <img src="public/images/bcswork/bcsWork23.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 24;">
+                            <img src="public/images/bcswork/bcsWork24.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 25;">
+                            <img src="public/images/bcswork/bcsWork25.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 26;">
+                            <img src="public/images/bcswork/bcsWork26.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 27;">
+                            <img src="public/images/bcswork/bcsWork27.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 28;">
+                            <img src="public/images/bcswork/bcsWork28.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 29;">
+                            <img src="public/images/bcswork/bcsWork29.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 30;">
+                            <img src="public/images/bcswork/bcsWork30.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 31;">
+                            <img src="public/images/bcswork/bcsWork31.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 32;">
+                            <img src="public/images/bcswork/bcsWork32.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 33;">
+                            <img src="public/images/bcswork/bcsWork33.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 34;">
+                            <img src="public/images/bcswork/bcsWork34.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+                        <div class="carousel-item" style="--i: 35;">
+                            <img src="public/images/bcswork/bcsWork35.jpg" alt="Creative Visual Showcase 18">
+                        </div>
+
 
                     </div>
                 </div>
@@ -603,19 +661,65 @@
                     </div>
                 </div>
 
-                <!-- Logo Grid (Expanded to 41) -->
-                <div class="row g-4 row-cols-2 row-cols-md-4 row-cols-lg-5">
+                <!-- Desktop View: Static Grid (Visible on Desktop only) -->
+                <div class="row g-4 row-cols-lg-5 d-none d-lg-flex mb-5">
                     <?php
-                    // Using local client logos (41 files available in public/images/icons/icons/)
                     for ($i = 1; $i <= 41; $i++) : ?>
                         <div class="col">
-                            <div class="client-logo-card">
-                                <img src="/public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png"
-                                    alt="BCS Elite Client Logo <?php echo $i; ?> - Trusted Digital Partner"
+                            <div class="client-logo-card w-100">
+                                <img src="public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png"
+                                    alt="BCS Elite Client Logo <?php echo $i; ?>"
                                     class="client-logo-img">
                             </div>
                         </div>
                     <?php endfor; ?>
+                </div>
+
+                <!-- Mobile & Tablet View: Smooth Marquee (Visible on Mobile/Tablet only) -->
+                <div class="d-lg-none">
+                    <!-- Row 1: Left to Right -->
+                    <div class="logo-marquee-container mb-4">
+                        <div class="logo-marquee-track">
+                            <?php
+                            for ($i = 1; $i <= 21; $i++) : ?>
+                                <div class="client-logo-card">
+                                    <img src="public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png"
+                                        alt="BCS Elite Client Logo <?php echo $i; ?>"
+                                        class="client-logo-img">
+                                </div>
+                            <?php endfor; ?>
+                            <?php
+                            for ($i = 1; $i <= 21; $i++) : ?>
+                                <div class="client-logo-card">
+                                    <img src="public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png"
+                                        alt="BCS Elite Client Logo <?php echo $i; ?>"
+                                        class="client-logo-img">
+                                </div>
+                            <?php endfor; ?>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Right to Left -->
+                    <div class="logo-marquee-container">
+                        <div class="logo-marquee-track reverse">
+                            <?php
+                            for ($i = 22; $i <= 41; $i++) : ?>
+                                <div class="client-logo-card">
+                                    <img src="public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png"
+                                        alt="BCS Elite Client Logo <?php echo $i; ?>"
+                                        class="client-logo-img">
+                                </div>
+                            <?php endfor; ?>
+                            <?php
+                            for ($i = 22; $i <= 41; $i++) : ?>
+                                <div class="client-logo-card">
+                                    <img src="public/images/icons/icons/bcs-client-logo (<?php echo $i; ?>).png"
+                                        alt="BCS Elite Client Logo <?php echo $i; ?>"
+                                        class="client-logo-img">
+                                </div>
+                            <?php endfor; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -686,7 +790,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Semantic SEO Content (Hidden) -->
         <section style="display: none;" aria-hidden="true">
             <h2>Best Website Development Company in Gandhidham & Kutch</h2>
@@ -782,7 +886,7 @@
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="faq-image-container position-relative rounded-4 overflow-hidden shadow-lg h-100" style="min-height: 450px;">
-                            <div class="faq-image-bg position-absolute top-0 start-0 w-100 h-100" style="background-image: url('/public/images/home/bcshome15.jpg'); background-size: cover; background-position: center; background-attachment: scroll;"></div>
+                            <div class="faq-image-bg position-absolute top-0 start-0 w-100 h-100" style="background-image: url('public/images/home/bcshome15.jpg'); background-size: cover; background-position: center; background-attachment: scroll;"></div>
                             <div class="faq-glass-overlay position-absolute bottom-0 start-0 w-100 p-4 m-3" style="width: calc(100% - 2rem) !important; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 1.5rem; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);">
                                 <h4 class="fw-bold mb-3" style="font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; color: #2e1a8e;">Why People Trust Us?</h4>
                                 <ul class="list-unstyled mb-0" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">
@@ -821,7 +925,7 @@
                     </div>
                 </div>
                 <div class="options">
-                    <div class="option active" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite0.jpg);">
+                    <div class="option active" style="--optionBackground:url('<?php echo BASE_URL; ?>public/images/bcswebsite/bcsWebsite0.jpg');">
                         <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
@@ -834,7 +938,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite1.jpg);">
+                    <div class="option" style="--optionBackground:url('<?php echo BASE_URL; ?>public/images/bcswebsite/bcsWebsite1.jpg');">
                         <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
@@ -848,7 +952,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite2.jpg);">
+                    <div class="option" style="--optionBackground:url('<?php echo BASE_URL; ?>public/images/bcswebsite/bcsWebsite2.jpg');">
                         <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
@@ -862,7 +966,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite3.jpg);">
+                    <div class="option" style="--optionBackground:url('<?php echo BASE_URL; ?>public/images/bcswebsite/bcsWebsite3.jpg');">
                         <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
@@ -876,7 +980,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option" style="--optionBackground:url(/public/images/bcswebsite/bcsWebsite4.jpg);">
+                    <div class="option" style="--optionBackground:url('<?php echo BASE_URL; ?>public/images/bcswebsite/bcsWebsite4.jpg');">
                         <div class="option-scroller"></div>
                         <div class="shadow"></div>
                         <div class="label">
@@ -893,3 +997,5 @@
                 </div>
             </div>
         </section>
+
+        <?php include __DIR__ . '/partials/inquiry-modal.php'; ?>

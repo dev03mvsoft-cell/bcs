@@ -26,11 +26,11 @@
                     <div class="about-assembly-container text-center position-relative">
                         <!-- Base Image -->
                         <div class="about-img-wrapper base-wrapper">
-                            <img src="/public/images/home/36.png" alt="BCS Digital Marketing Services Hub in Gandhidham" class="about-img-base img-fluid">
+                            <img src="public/images/home/36.png" alt="BCS Digital Marketing Services Hub in Gandhidham" class="about-img-base img-fluid">
                         </div>
                         <!-- Sliding Image -->
                         <div class="about-img-wrapper slide-wrapper about-img-slide">
-                            <img src="/public/images/home/37.png" alt="Professional SEO and Branding Agency Kutch - Business Solutions" class="img-fluid">
+                            <img src="public/images/home/37.png" alt="Professional SEO and Branding Agency Kutch - Business Solutions" class="img-fluid">
                         </div>
                     </div>
                 </div>

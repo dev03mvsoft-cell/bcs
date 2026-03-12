@@ -36,13 +36,13 @@
                     <div class="career-hero-visual-v2">
                         <div class="staggered-images">
                             <div class="image-box box-1" data-aos="fade-left" data-aos-delay="200">
-                                <img src="/public/images/home/bcshome13.jpg" alt="BCS Culture 1">
+                                <img src="public/images/home/bcshome13.jpg" alt="BCS Culture 1">
                             </div>
                             <div class="image-box box-2" data-aos="fade-left" data-aos-delay="400">
-                                <img src="/public/images/home/bcshome6.jpg" alt="BCS Culture 2">
+                                <img src="public/images/home/bcshome6.jpg" alt="BCS Culture 2">
                             </div>
                             <div class="image-box box-3" data-aos="fade-left" data-aos-delay="600">
-                                <img src="/public/images/home/bcshome7.jpg" alt="BCS Culture 3">
+                                <img src="public/images/home/bcshome7.jpg" alt="BCS Culture 3">
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-lg-7 order-1 order-lg-2 mb-5 mb-lg-0">
                     <div class="staggered-layout-v2">
-                        <img src="/public/images/home/35.png" alt="Growth at BCS" class="img-main rounded-5 shadow-lg">
+                        <img src="public/images/home/35.png" alt="Growth at BCS" class="img-main rounded-5 shadow-lg">
                         <div class="floating-badge-v2">
                             <span>GROWTH</span>
                         </div>
@@ -123,7 +123,7 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="advantage-visual">
                         <div class="about-triangle-bg career-triangle"></div>
-                        <img src="/public/images/home/34.png" alt="BCS Gandhidham" class="advantage-img shadow-lg">
+                        <img src="public/images/home/34.png" alt="BCS Gandhidham" class="advantage-img shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
@@ -262,7 +262,7 @@
 </div>
 
 <!-- reCAPTCHA v3 -->
-<script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeJHIcsAAAAAGZDDlV4F4QOdIW7__5j7qEEg455"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const careerForm = document.getElementById('careerForm');
@@ -281,7 +281,7 @@
                 }
 
                 grecaptcha.ready(function() {
-                    grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {
+                    grecaptcha.execute('6LeJHIcsAAAAAGZDDlV4F4QOdIW7__5j7qEEg455', {
                         action: 'career'
                     }).then(function(token) {
                         document.getElementById('recaptcha_token_career').value = token;

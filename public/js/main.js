@@ -3,26 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
   // 1. "How Can We Help You?" Assembly Animation
-  gsap.to(".part-left", {
-    x: 0,
-    opacity: 0.6,
-    scrollTrigger: {
-      trigger: "#how-we-help",
-      start: "top bottom",
-      end: "top top",
-      scrub: 1,
-    },
-  });
-  gsap.to(".part-right", {
-    x: 0,
-    opacity: 0.6,
-    scrollTrigger: {
-      trigger: "#how-we-help",
-      start: "top bottom",
-      end: "top top",
-      scrub: 1,
-    },
-  });
+  if (document.querySelector(".part-left") && document.querySelector("#how-we-help")) {
+    gsap.to(".part-left", {
+      x: 0,
+      opacity: 0.6,
+      scrollTrigger: {
+        trigger: "#how-we-help",
+        start: "top bottom",
+        end: "top top",
+        scrub: 1,
+      },
+    });
+  }
+  if (document.querySelector(".part-right") && document.querySelector("#how-we-help")) {
+    gsap.to(".part-right", {
+      x: 0,
+      opacity: 0.6,
+      scrollTrigger: {
+        trigger: "#how-we-help",
+        start: "top bottom",
+        end: "top top",
+        scrub: 1,
+      },
+    });
+  }
 
   // Modern Sidebar Navigation Logic
   const hamburgerBtn = document.getElementById("hamburger-btn");
@@ -83,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "-=0.6",
     )
     .from(
-      ".hamburger-btn",
+      ".header-controls",
       {
         duration: 0.8,
         x: 30,
@@ -93,13 +97,40 @@ document.addEventListener("DOMContentLoaded", () => {
       "-=0.6",
     );
 
-  // Scroll visibility for header
+  // Helper function to check if Swiper has enough slides for loop
+  const canLoop = (selector) => {
+    const el = document.querySelector(selector);
+    if (!el) return false;
+    const slides = el.querySelectorAll('.swiper-slide');
+    return slides.length > 1;
+  };
+
+  // Scroll visibility for header and WhatsApp Badge
   window.addEventListener("scroll", () => {
     const header = document.getElementById("main-header");
+    const whatsappBadge = document.querySelector(".whatsapp-badge-ticket");
+    const heroSection = document.querySelector(".hero-section");
+    
     if (window.scrollY > 50) {
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");
+    }
+
+    if (whatsappBadge) {
+      const hero = heroSection || document.querySelector(".about-hero");
+      
+      if (hero) {
+        const heroHeight = hero.offsetHeight;
+        if (window.scrollY > heroHeight - 100) {
+          whatsappBadge.classList.add("visible");
+        } else {
+          whatsappBadge.classList.remove("visible");
+        }
+      } else {
+        // If there is no hero section at all, show the badge by default
+        whatsappBadge.classList.add("visible");
+      }
     }
   });
 
@@ -191,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hero Background Swiper (Horizontal)
   const bgSwiper = new Swiper(".hero-bg-swiper", {
     direction: "horizontal",
-    loop: true,
+    loop: canLoop(".hero-bg-swiper"),
     allowTouchMove: false, // Background doesn't need touch
     speed: 1200,
     effect: "slide",
@@ -200,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hero Text Swiper Initialization (Vertical)
   const textSwiper = new Swiper(".hero-text-swiper", {
     direction: "vertical",
-    loop: true,
+    loop: canLoop(".hero-text-swiper"),
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -210,20 +241,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Synchronize Sliders
-  textSwiper.on("slideChange", () => {
-    setTimeout(() => {
-      bgSwiper.slideToLoop(textSwiper.realIndex);
-    }, 500); // Increased delay as requested
-  });
+  if (textSwiper.on) {
+    textSwiper.on("slideChange", () => {
+      setTimeout(() => {
+        if (bgSwiper.slideToLoop) {
+          bgSwiper.slideToLoop(textSwiper.realIndex);
+        }
+      }, 500); // Increased delay as requested
+    });
+  }
 
   // Decorative Visual Animation
-  gsap.from(".hero-visual-wrapper", {
-    duration: 1.5,
-    x: 100,
-    opacity: 0,
-    ease: "power4.out",
-    delay: 0.8,
-  });
+  if (document.querySelector(".hero-visual-wrapper")) {
+    gsap.from(".hero-visual-wrapper", {
+      duration: 1.5,
+      x: 100,
+      opacity: 0,
+      ease: "power4.out",
+      delay: 0.8,
+    });
+  }
 
   // About Section Entrance
   gsap.from(".about-img-slide", {
@@ -239,8 +276,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Swiper Initialization
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
+  const swiperOptions = {
+    loop: canLoop(".mySwiper"),
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -253,7 +290,9 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeEffect: {
       crossFade: true,
     },
-  });
+  };
+  
+  const swiper = new Swiper(".mySwiper", swiperOptions);
 
   // Feature Cards Entrance
   if (document.querySelector(".features")) {
@@ -507,3 +546,71 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.refresh();
   });
 });
+
+/* ============================================================ */
+/*  LANGUAGE SELECTOR LOGIC                                     */
+/* ============================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+    const langBtn = document.getElementById("lang-hamburger-btn");
+    const languageModalElement = document.getElementById("languageModal");
+    
+    if (langBtn && languageModalElement) {
+        const languageModal = new bootstrap.Modal(languageModalElement);
+
+        langBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            languageModal.show();
+        });
+
+        const langOptions = document.querySelectorAll(".lang-option-item");
+        langOptions.forEach(option => {
+            option.addEventListener("click", function() {
+                const langCode = this.getAttribute("data-lang-code");
+                const langName = this.getAttribute("data-lang-name");
+
+                // Visual feedback: Highlight selected
+                langOptions.forEach(opt => opt.classList.remove("active-lang"));
+                this.classList.add("active-lang");
+
+                setGoogleLanguage(langCode, langName);
+                
+                // Close modal after selection
+                setTimeout(() => {
+                    languageModal.hide();
+                }, 300);
+            });
+        });
+    }
+});
+
+function setGoogleLanguage(langCode, langName) {
+    const googleSelect = document.querySelector(".goog-te-combo");
+    if (googleSelect) {
+        googleSelect.value = langCode;
+        googleSelect.dispatchEvent(new Event("change"));
+        
+        // Update trigger button text
+        const langBtnText = document.querySelector("#lang-btn span");
+        if (langBtnText) {
+            langBtnText.innerText = langName;
+        }
+
+        // Show a discrete notification
+        Swal.fire({
+            title: 'Language Changed',
+            text: `Website is now being translated to ${langName}`,
+            icon: 'success',
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            background: 'rgba(255, 255, 255, 0.9)',
+            backdrop: 'none'
+        });
+    } else {
+        console.warn("Google Translate initialization in progress...");
+        setTimeout(() => setGoogleLanguage(langCode, langName), 500);
+    }
+}
+

@@ -151,46 +151,58 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
 
     <!-- JSON-LD Local Business Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "BCS - Business Care Solutions",
-      "image": "<?php echo BASE_URL; ?>public/images/logo/logo01.png",
-      "@id": "<?php echo BASE_URL; ?>",
-      "url": "<?php echo BASE_URL; ?>",
-      "telephone": "+919925818323",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor",
-        "addressLocality": "Gandhidham",
-        "postalCode": "370201",
-        "addressRegion": "Gujarat",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 23.0754,
-        "longitude": 70.1337
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "10:00",
-        "closes": "19:00"
-      },
-      "sameAs": [
-        "https://www.facebook.com/businesscaresolutions",
-        "https://www.instagram.com/business_care_solutions/",
-        "https://www.linkedin.com/company/businesscaresolutions/"
-      ]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "BCS - Business Care Solutions",
+            "image": "<?php echo BASE_URL; ?>public/images/logo/logo01.png",
+            "@id": "<?php echo BASE_URL; ?>",
+            "url": "<?php echo BASE_URL; ?>",
+            "telephone": "+919925818323",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor",
+                "addressLocality": "Gandhidham",
+                "postalCode": "370201",
+                "addressRegion": "Gujarat",
+                "addressCountry": "IN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 23.0754,
+                "longitude": 70.1337
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens": "10:00",
+                "closes": "19:00"
+            },
+            "sameAs": [
+                "https://www.facebook.com/businesscaresolutions",
+                "https://www.instagram.com/business_care_solutions/",
+                "https://www.linkedin.com/company/businesscaresolutions/"
+            ],
+            "department": [{
+                "@type": "LocalBusiness",
+                "name": "BCS - Ahmedabad Branch",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "5th Floor Office no 14-F, Kalapurnam Complex, Navrangpura",
+                    "addressLocality": "Ahmedabad",
+                    "postalCode": "380009",
+                    "addressRegion": "Gujarat",
+                    "addressCountry": "IN"
+                }
+            }]
+        }
     </script>
 </head>
 
@@ -216,6 +228,7 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>about" class="sidebar-link <?php echo $page === 'about' ? 'active' : ''; ?>">About Us</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>services" class="sidebar-link <?php echo $page === 'services' ? 'active' : ''; ?>">Services</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>products" class="sidebar-link <?php echo $page === 'products' ? 'active' : ''; ?>">Products</a></li>
+                <li class="sidebar-link-item"><a href="https://blogs.bcsads.com/" class="sidebar-link" target="_blank">Blog</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>career" class="sidebar-link <?php echo $page === 'career' ? 'active' : ''; ?>">Career</a></li>
                 <li class="sidebar-link-item"><a href="<?php echo BASE_URL; ?>contact" class="sidebar-link <?php echo $page === 'contact' ? 'active' : ''; ?>">Contact</a></li>
             </ul>
@@ -238,12 +251,25 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
                     <img src="public/images/logo/logo01.png" alt="BCS ADS Co. Logo" class="header-logo-img me-2">
                 </a>
 
-                <!-- Hamburger Trigger -->
-                <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+                <!-- Language & Hamburger Controls -->
+                <div class="header-controls d-flex align-items-center gap-2">
+                    <!-- Language Hamburger Button with Globe Icon -->
+                    <button class="lang-hamburger-btn" id="lang-hamburger-btn" aria-label="Change Language" data-bs-toggle="modal" data-bs-target="#languageModal" title="Select Language">
+                        <i class="fa-solid fa-globe"></i>
+                        <!-- <span class="lang-hamburger-lines">
+                            <span class="lang-hamburger-line"></span>
+                            <span class="lang-hamburger-line"></span>
+                            <span class="lang-hamburger-line"></span>
+                        </span> -->
+                    </button>
+
+                    <!-- Main Navigation Hamburger Trigger -->
+                    <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -269,6 +295,24 @@ $view_file = __DIR__ . '/views/' . $page . '.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Google Translate Widget (Hidden but Functional) -->
+    <div id="google_translate_element" style="position: fixed; top: -9999px; left: -9999px; opacity: 0; pointer-events: none; z-index: -9999;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,gu,es,fr,de,ar,zh-CN,ru,pt,it,ja,ko',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Language Modal -->
+    <?php include __DIR__ . '/views/partials/language-modal.php'; ?>
+
     <script src="public/js/main.js"></script>
 </body>
 
