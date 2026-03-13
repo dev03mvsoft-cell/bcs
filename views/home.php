@@ -22,7 +22,7 @@
 
                                         <div class="hero-content-wrap">
                                             <div class="hero-text-mask">
-                                                <h1 class="hero-headline mb-4">Designing Powerful <br>Web Experiences</h1>
+                                                <h1 class="hero-headline mb-4">Designing Powerful<br>Web Experiences</h1>
                                             </div>
                                             <div class="hero-text-mask">
                                                 <p class="hero-subtext mb-5">Empowering your brand with modern visual strategies and high-impact digital campaigns.</p>
@@ -627,17 +627,32 @@
             </div>
         </section>
 
-        <!-- Semantic SEO Content (Hidden) -->
-        <section style="display: none;" aria-hidden="true">
-            <h2>Best Website Development Company in Gandhidham & Kutch</h2>
-            <p>Business Care Solutions is the leading digital marketing agency in Gandhidham, providing top-tier web design company services in Kutch. We specialize as a website developer in Gandhidham, Bhuj, Anjar, and Mundra. Our expertise includes shipping website development in Kandla and logistics website development in Mundra. If you are looking for a web designer in Bhuj or a website designer in Anjar, BCS offers the most professional digital marketing company solutions in Gandhidham and Ahmedabad.</p>
-            <ul>
-                <li>Website Development Company in Gandhidham</li>
-                <li>Web Design Agency Ahmedabad</li>
-                <li>Digital Marketing Company in Gandhidham</li>
-                <li>SEO Company in Gandhidham</li>
-                <li>Shipping Software Development Kutch</li>
-            </ul>
+        <!-- Search Optimized Services Summary -->
+        <section class="seo-summary-section py-5 bg-light border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="seo-summary-content">
+                            <h2 class="h5 fw-bold text-dark mb-4">Strategic Digital Partner in Gandhidham & Gujarat</h2>
+                            <div class="seo-rich-text text-muted" style="font-size: 0.9rem; line-height: 1.8;">
+                                <p class="mb-4">
+                                    Business Care Solutions is the leading **digital marketing agency in Gandhidham**, providing top-tier **web design company** services in Kutch.
+                                    We specialize as a **website developer in Gandhidham**, Bhuj, Anjar, and Mundra. Our expertise includes **shipping website development in Kandla**
+                                    and **logistics website development in Mundra**. If you are looking for a **web designer in Bhuj** or a **website designer in Anjar**,
+                                    BCS offers the most professional **digital marketing company** solutions in Gandhidham and Ahmedabad.
+                                </p>
+                                <div class="seo-tag-cloud d-flex flex-wrap gap-2">
+                                    <span class="badge rounded-pill bg-white text-muted border px-3 py-2 fw-normal">Website Development Company in Gandhidham</span>
+                                    <span class="badge rounded-pill bg-white text-muted border px-3 py-2 fw-normal">Web Design Agency Ahmedabad</span>
+                                    <span class="badge rounded-pill bg-white text-muted border px-3 py-2 fw-normal">Digital Marketing Company in Gandhidham</span>
+                                    <span class="badge rounded-pill bg-white text-muted border px-3 py-2 fw-normal">SEO Company in Gandhidham</span>
+                                    <span class="badge rounded-pill bg-white text-muted border px-3 py-2 fw-normal">Shipping Software Development Kutch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="transformation-cta text-center">

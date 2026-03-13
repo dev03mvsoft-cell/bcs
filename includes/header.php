@@ -163,6 +163,9 @@ if (isset($seo_data[$route])) {
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -284,9 +287,114 @@ if (isset($seo_data[$route])) {
 
                 <!-- Language & Hamburger Controls -->
                 <div class="header-controls d-flex align-items-center gap-2">
-                    <!-- Language Hamburger Button with Globe Icon -->
-                    <button class="lang-hamburger-btn" id="lang-hamburger-btn" aria-label="Change Language" data-bs-toggle="modal" data-bs-target="#languageModal" title="Select Language">
+                    <?php
+                    // Get current language code
+                    $current_lang_code = 'en';
+                    $current_variant_flag = ''; // For English variants
+
+                    if (isset($_COOKIE['googtrans'])) {
+                        $parts = explode('/', $_COOKIE['googtrans']);
+                        $current_lang_code = end($parts);
+                    }
+                    
+                    // Detect English variant from custom cookie
+                    if ($current_lang_code === 'en' && isset($_COOKIE['bcs_lang_variant'])) {
+                        $current_variant_flag = $_COOKIE['bcs_lang_variant'];
+                    }
+                    
+                    // Map Google codes to ISO country codes for flag-icons
+                    $languages = [
+                        // Indian State Languages
+                        'hi' => ['flag' => 'in', 'name' => 'Hindi'],
+                        'gu' => ['flag' => 'in', 'name' => 'Gujarati'],
+                        'ta' => ['flag' => 'in', 'name' => 'Tamil'],
+                        'te' => ['flag' => 'in', 'name' => 'Telugu'],
+                        'mr' => ['flag' => 'in', 'name' => 'Marathi'],
+                        'bn' => ['flag' => 'in', 'name' => 'Bengali'],
+                        'pa' => ['flag' => 'in', 'name' => 'Punjabi'],
+                        'kn' => ['flag' => 'in', 'name' => 'Kannada'],
+                        'ml' => ['flag' => 'in', 'name' => 'Malayalam'],
+                        'or' => ['flag' => 'in', 'name' => 'Odia'],
+                        'as' => ['flag' => 'in', 'name' => 'Assamese'],
+                        'sa' => ['flag' => 'in', 'name' => 'Sanskrit'],
+                        'ur' => ['flag' => 'in', 'name' => 'Urdu'],
+                        'gom' => ['flag' => 'in', 'name' => 'Konkani'],
+                        'mni' => ['flag' => 'in', 'name' => 'Manipuri'],
+                        'ne' => ['flag' => 'np', 'name' => 'Nepali'],
+                        'ks' => ['flag' => 'in', 'name' => 'Kashmiri'],
+                        'mai' => ['flag' => 'in', 'name' => 'Maithili'],
+                        'sat' => ['flag' => 'in', 'name' => 'Santali'],
+                        'sd' => ['flag' => 'in', 'name' => 'Sindhi'],
+                        'doi' => ['flag' => 'in', 'name' => 'Dogri'],
+                        
+                        // International Languages - English defaults to Indian Flag as requested
+                        'en' => ['flag' => !empty($current_variant_flag) ? $current_variant_flag : 'in', 'name' => 'English'],
+                        'es' => ['flag' => 'es', 'name' => 'Spanish'],
+                        'fr' => ['flag' => 'fr', 'name' => 'French'],
+                        'de' => ['flag' => 'de', 'name' => 'German'],
+                        'ar' => ['flag' => 'sa', 'name' => 'Arabic'],
+                        'zh-CN' => ['flag' => 'cn', 'name' => 'Chinese (S)'],
+                        'zh-TW' => ['flag' => 'tw', 'name' => 'Chinese (T)'],
+                        'ru' => ['flag' => 'ru', 'name' => 'Russian'],
+                        'pt' => ['flag' => 'pt', 'name' => 'Portuguese'],
+                        'it' => ['flag' => 'it', 'name' => 'Italian'],
+                        'ja' => ['flag' => 'jp', 'name' => 'Japanese'],
+                        'ko' => ['flag' => 'kr', 'name' => 'Korean'],
+                        'tr' => ['flag' => 'tr', 'name' => 'Turkish'],
+                        'nl' => ['flag' => 'nl', 'name' => 'Dutch'],
+                        'pl' => ['flag' => 'pl', 'name' => 'Polish'],
+                        'sv' => ['flag' => 'se', 'name' => 'Swedish'],
+                        'id' => ['flag' => 'id', 'name' => 'Indonesian'],
+                        'vi' => ['flag' => 'vn', 'name' => 'Vietnamese'],
+                        'th' => ['flag' => 'th', 'name' => 'Thai'],
+                        'el' => ['flag' => 'gr', 'name' => 'Greek'],
+                        'cs' => ['flag' => 'cz', 'name' => 'Czech'],
+                        'iw' => ['flag' => 'il', 'name' => 'Hebrew'],
+                        'hu' => ['flag' => 'hu', 'name' => 'Hungarian'],
+                        'ro' => ['flag' => 'ro', 'name' => 'Romanian'],
+                        'da' => ['flag' => 'dk', 'name' => 'Danish'],
+                        'fi' => ['flag' => 'fi', 'name' => 'Finnish'],
+                        'no' => ['flag' => 'no', 'name' => 'Norwegian'],
+                        'sk' => ['flag' => 'sk', 'name' => 'Slovak'],
+                        'bg' => ['flag' => 'bg', 'name' => 'Bulgarian'],
+                        'hr' => ['flag' => 'hr', 'name' => 'Croatian'],
+                        'uk' => ['flag' => 'ua', 'name' => 'Ukrainian'],
+                        'ms' => ['flag' => 'my', 'name' => 'Malay'],
+                        'fa' => ['flag' => 'ir', 'name' => 'Persian'],
+                        'la' => ['flag' => 'va', 'name' => 'Latin'],
+                        'sr' => ['flag' => 'rs', 'name' => 'Serbian'],
+                        'sl' => ['flag' => 'si', 'name' => 'Slovenian'],
+                        'lt' => ['flag' => 'lt', 'name' => 'Lithuanian'],
+                        'lv' => ['flag' => 'lv', 'name' => 'Latvian'],
+                        'et' => ['flag' => 'ee', 'name' => 'Estonian'],
+                        'is' => ['flag' => 'is', 'name' => 'Icelandic'],
+                        'sq' => ['flag' => 'al', 'name' => 'Albanian'],
+                        'mk' => ['flag' => 'mk', 'name' => 'Macedonian'],
+                        'ga' => ['flag' => 'ie', 'name' => 'Irish'],
+                        'cy' => ['flag' => 'gb-wls', 'name' => 'Welsh'],
+                        'mt' => ['flag' => 'mt', 'name' => 'Maltese'],
+                        'zu' => ['flag' => 'za', 'name' => 'Zulu'],
+                        'sw' => ['flag' => 'ke', 'name' => 'Swahili'],
+                        'af' => ['flag' => 'za', 'name' => 'Afrikaans'],
+                        'am' => ['flag' => 'et', 'name' => 'Amharic'],
+                        'hy' => ['flag' => 'am', 'name' => 'Armenian'],
+                        'az' => ['flag' => 'az', 'name' => 'Azerbaijani'],
+                        'ka' => ['flag' => 'ge', 'name' => 'Georgian'],
+                        'kk' => ['flag' => 'kz', 'name' => 'Kazakh'],
+                        'mn' => ['flag' => 'mn', 'name' => 'Mongolian'],
+                        'uz' => ['flag' => 'uz', 'name' => 'Uzbek'],
+                        'km' => ['flag' => 'kh', 'name' => 'Khmer'],
+                        'lo' => ['flag' => 'la', 'name' => 'Lao'],
+                        'my' => ['flag' => 'mm', 'name' => 'Burmese'],
+                        'si' => ['flag' => 'lk', 'name' => 'Sinhala']
+                    ];
+                    
+                    $current_lang = $languages[$current_lang_code] ?? $languages['en'];
+                    ?>
+                    <!-- Language Button with Globe Icon & Flag -->
+                    <button class="lang-hamburger-btn" id="lang-btn" aria-label="Change Language" data-bs-toggle="modal" data-bs-target="#languageModal" title="Select Language">
                         <i class="fa-solid fa-globe"></i>
+                        <span class="selected-lang-flag fi fi-<?php echo $current_lang['flag']; ?>"></span>
                     </button>
 
                     <!-- Main Navigation Hamburger Trigger -->

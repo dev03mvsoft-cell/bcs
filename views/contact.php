@@ -207,7 +207,7 @@
 
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             gsap.to('.contact-backdrop-text', {
-                x: -150,
+                x: () => window.innerWidth < 768 ? -50 : -150, // Scaled movement for mobile
                 scrollTrigger: {
                     trigger: '.contact-page-wrapper',
                     scrub: 1.5,

@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*  LANGUAGE SELECTOR LOGIC                                     */
 /* ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
-    const langBtn = document.getElementById("lang-hamburger-btn");
+    const langBtn = document.getElementById("lang-btn");
     const languageModalElement = document.getElementById("languageModal");
     
     if (langBtn && languageModalElement) {
@@ -543,17 +543,18 @@ document.addEventListener("DOMContentLoaded", () => {
             languageModal.show();
         });
 
-        const langOptions = document.querySelectorAll(".lang-option-item");
+        const langOptions = document.querySelectorAll(".language-option");
         langOptions.forEach(option => {
             option.addEventListener("click", function() {
-                const langCode = this.getAttribute("data-lang-code");
-                const langName = this.getAttribute("data-lang-name");
+                const langCode = this.getAttribute("data-lang");
+                const langName = this.querySelector(".lang-name").textContent;
+                const langFlag = this.getAttribute("data-flag");
 
                 // Visual feedback: Highlight selected
                 langOptions.forEach(opt => opt.classList.remove("active-lang"));
                 this.classList.add("active-lang");
 
-                setGoogleLanguage(langCode, langName);
+                setGoogleLanguage(langCode, langName, langFlag);
                 
                 // Close modal after selection
                 setTimeout(() => {
@@ -564,34 +565,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-function setGoogleLanguage(langCode, langName) {
+function setGoogleLanguage(langCode, langName, langFlag) {
+    // Set cookie for persistence across all pages and sessions
+    const cookieValue = langCode === 'en' ? "" : `/en/${langCode}`;
+    document.cookie = `googtrans=${cookieValue}; path=/;`;
+    document.cookie = `googtrans=${cookieValue}; path=/; domain=${window.location.hostname};`;
+
+    // Persistence for English variants flags (since code is always 'en')
+    if (langCode === 'en') {
+        document.cookie = `bcs_lang_variant=${langFlag}; path=/; max-age=31536000;`;
+    } else {
+        // Clear variant if switching to other language
+        document.cookie = "bcs_lang_variant=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    }
+
     const googleSelect = document.querySelector(".goog-te-combo");
     if (googleSelect) {
         googleSelect.value = langCode;
         googleSelect.dispatchEvent(new Event("change"));
         
-        // Update trigger button text
-        const langBtnText = document.querySelector("#lang-btn span");
-        if (langBtnText) {
-            langBtnText.innerText = langName;
+        // Update trigger button flag icon class
+        const langBtnFlag = document.querySelector("#lang-btn .selected-lang-flag");
+        if (langBtnFlag) {
+            langBtnFlag.className = `selected-lang-flag fi fi-${langFlag}`;
         }
 
         // Show a discrete notification
         Swal.fire({
-            title: 'Language Changed',
+            title: 'Language Updated',
             text: `Website is now being translated to ${langName}`,
             icon: 'success',
             toast: true,
             position: 'top-end',
             showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            background: 'rgba(255, 255, 255, 0.9)',
-            backdrop: 'none'
+            timer: 2000,
+            timerProgressBar: true
         });
+
+        // Small delay then reload to ensure translation sticks across refreshes
+        setTimeout(() => {
+            location.reload();
+        }, 800);
     } else {
-        console.warn("Google Translate initialization in progress...");
-        setTimeout(() => setGoogleLanguage(langCode, langName), 500);
+        // Fallback to reload if widget is not initialized
+        location.reload();
     }
 }
 

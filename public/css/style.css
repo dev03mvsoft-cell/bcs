@@ -3926,15 +3926,37 @@ h3,
     position: absolute;
     top: 50%;
     left: 3%;
-    font-size: clamp(8rem, 25vw, 15rem);
+    font-size: clamp(6rem, 25vw, 15rem); /* Slightly smaller base for better scaling */
     font-family: var(--font-heading);
     font-weight: 950;
-    color: rgba(24, 56, 130, 0.163);
+    color: rgba(24, 56, 130, 0.1); /* Slightly more subtle */
     white-space: nowrap;
     pointer-events: none;
     z-index: 1;
     line-height: 1;
     text-transform: uppercase;
+    transition: font-size 0.3s ease;
+}
+
+@media (max-width: 991px) {
+    .career-backdrop-text,
+    .contact-backdrop-text {
+        top: 70%;
+        font-size: clamp(4rem, 20vw, 8rem);
+        left: 5%;
+        opacity: 0.6;
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .career-backdrop-text,
+    .contact-backdrop-text {
+        top: 50%;
+        font-size: clamp(3rem, 15vw, 5rem);
+        left: 5%;
+        letter-spacing: -2px;
+    }
 }
 
 .magazine-heading {
@@ -5062,16 +5084,33 @@ h3,
 /* ============================================================ */
 
 .lang-hamburger-btn {
-    background: none;
-    border: none;
-    padding: 8px; /* Reduced from 8px 10px */
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 46, 142, 0.1);
+    padding: 6px 12px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     z-index: 1000;
-    border-radius: 4px;
+    border-radius: 100px;
     position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(0, 46, 142, 0.05);
+}
+
+.selected-lang-flag {
+    width: 20px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lang-hamburger-btn:hover .selected-lang-flag {
+    transform: scale(1.1);
 }
 
 .lang-hamburger-btn i {
@@ -5186,12 +5225,41 @@ h3,
     color: rgba(15, 23, 42, 0.5) !important;
 }
 
-/* Language Grid - List Layout */
+/* Language Modal Categories */
+.language-category {
+    padding: 1.5rem 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 46, 142, 0.08);
+}
+
+.language-category:first-of-type {
+    margin-top: 0;
+}
+
+.language-category span {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #002e8e;
+    opacity: 0.8;
+}
+
+/* Language Grid - Grid Layout for many items */
 .language-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 12px !important;
     width: 100% !important;
+    padding: 15px 0 !important;
+}
+
+.language-option {
+    padding: 10px 14px !important;
+    gap: 10px !important;
 }
 
 /* Language Option Buttons - List Items */
