@@ -41,6 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
     menuOverlay.classList.toggle("active", isOpen);
     document.body.style.overflow = isOpen ? "hidden" : "";
 
+    // Hide/Show WhatsApp badge when menu is open
+    const whatsappBadge = document.querySelector(".whatsapp-badge-ticket");
+    if (whatsappBadge) {
+      if (isOpen) {
+        whatsappBadge.style.display = "none";
+      } else {
+        // We don't just set it to block, we let the scroll listener handle visibility
+        whatsappBadge.style.display = ""; 
+        // Trigger scroll event to recalculate visibility immediately
+        window.dispatchEvent(new Event('scroll'));
+      }
+    }
+
     if (isOpen) {
       // Stagger animate links when menu opens
       gsap.to(navLinks, {
