@@ -10,6 +10,19 @@
             openModalBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
+                    
+                    // Logic to hide/show employees field
+                    const employeesField = document.getElementById('employeesFieldGroup');
+                    if (employeesField) {
+                        if (btn.hasAttribute('data-hide-employees')) {
+                            employeesField.classList.add('d-none');
+                            employeesField.querySelector('input').required = false;
+                        } else {
+                            employeesField.classList.remove('d-none');
+                            employeesField.querySelector('input').required = true;
+                        }
+                    }
+
                     inquiryModal.style.display = 'flex';
                     document.body.style.overflow = 'hidden'; // Prevent scroll
                 });
@@ -113,29 +126,43 @@
                 <input type="text" name="website_hp">
             </div>
 
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Full Name</label>
-                <input type="text" name="name" class="inquiry-input" placeholder="e.g. John Doe" required>
-            </div>
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Work Email</label>
-                <input type="email" name="email" class="inquiry-input" placeholder="e.g. john@company.com" required>
-            </div>
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Company Name</label>
-                <input type="text" name="company" class="inquiry-input" placeholder="e.g. Acme Corp" required>
-            </div>
-            <?php if ($page !== 'products'): ?>
-                <div class="inquiry-form-group">
-                    <label class="inquiry-label">Total Employees</label>
-                    <input type="number" name="employees" class="inquiry-input" placeholder="e.g. 50" required>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="inquiry-form-group">
+                        <label class="inquiry-label">Full Name</label>
+                        <input type="text" name="name" class="inquiry-input" placeholder="e.g. John Doe" required>
+                    </div>
                 </div>
-            <?php endif; ?>
-            <div class="inquiry-form-group">
-                <label class="inquiry-label">Tell Us the Problem</label>
-                <textarea name="problem" class="inquiry-input" rows="4" placeholder="Describe the challenges you're facing..." required></textarea>
+                <div class="col-md-6">
+                    <div class="inquiry-form-group">
+                        <label class="inquiry-label">Work Email</label>
+                        <input type="email" name="email" class="inquiry-input" placeholder="e.g. john@company.com" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="inquiry-form-group">
+                        <label class="inquiry-label">Company Name</label>
+                        <input type="text" name="company" class="inquiry-input" placeholder="e.g. Acme Corp" required>
+                    </div>
+                </div>
+                <?php if ($page !== 'products'): ?>
+                <div class="col-md-6" id="employeesFieldGroup">
+                    <div class="inquiry-form-group">
+                        <label class="inquiry-label">Total Employees</label>
+                        <input type="number" name="employees" class="inquiry-input" placeholder="e.g. 50" required>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <div class="col-md-12">
+                    <div class="inquiry-form-group">
+                        <label class="inquiry-label">Tell Us the Problem</label>
+                        <textarea name="problem" class="inquiry-input" rows="4" placeholder="Describe the challenges you're facing..." required></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="submit-inquiry-btn">Submit Inquiry</button>
+                </div>
             </div>
-            <button type="submit" class="submit-inquiry-btn">Submit Inquiry</button>
         </form>
     </div>
 </div>

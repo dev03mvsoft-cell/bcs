@@ -30,7 +30,7 @@
                                         </div>
 
                                         <div class="hero-cta-wrapper">
-                                            <a href="/contact" class="btn btn-cyan btn-lg px-5 py-3 magnetic-item">LET'S BEGIN</a>
+                                            <button type="button" class="btn btn-cyan btn-lg px-5 py-3 magnetic-item open-inquiry-modal" data-hide-employees="true">LET'S BEGIN</button>
                                         </div>
                                     </div>
                                 </div>

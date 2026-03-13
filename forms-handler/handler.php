@@ -26,7 +26,7 @@ $smtp_host = 'smtp.gmail.com';
 $smtp_user = 'dev03.mvsoft@gmail.com';
 $smtp_pass = 'rhgc lslb qfxx szen';
 $smtp_port = 587; // TLS
-$admin_email = 'dev03.mvsoft@gmail.com'; // Change if needed
+$admin_email = 'manojkup999@gmail.com'; // Updated as per user request
 
 // --- LOGIC ---
 

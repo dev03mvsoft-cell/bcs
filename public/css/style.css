@@ -4958,12 +4958,11 @@ h3,
 .modal-content-card {
     background: #fff;
     width: 100%;
-    max-width: 550px;
-    border-radius: 30px;
+    max-width: 720px; /* Reduced from 800px */
+    border-radius: 25px;
     position: relative;
-    padding: 3rem;
+    padding: 2rem; /* Reduced from 3rem */
     margin: auto;
-    /* Center vertically if space allows */
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
     animation: modalScale 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -4982,12 +4981,12 @@ h3,
 
 .modal-close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px; /* Adjusted */
+    right: 15px; /* Adjusted */
     background: #f1f5f9;
     border: none;
-    width: 36px;
-    height: 36px;
+    width: 32px; /* Reduced */
+    height: 32px; /* Reduced */
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -5005,29 +5004,29 @@ h3,
 }
 
 .inquiry-form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem; /* Reduced from 1.25rem */
 }
 
 .inquiry-label {
     display: block;
     font-weight: 700;
     color: var(--dark);
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem; /* Slightly smaller */
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .inquiry-input {
     width: 100%;
-    padding: 0.85rem 1.1rem;
+    padding: 0.75rem 1rem; /* Reduced */
     background: #f8fafc;
     border: 2px solid #f1f5f9;
-    border-radius: 12px;
+    border-radius: 10px; /* Slightly tighter */
     color: var(--dark);
     font-weight: 500;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 0.95rem; /* Slightly smaller */
 }
 
 .inquiry-input:focus {
@@ -5039,18 +5038,18 @@ h3,
 
 .submit-inquiry-btn {
     width: 100%;
-    padding: 1.1rem;
+    padding: 0.9rem; /* Reduced from 1.1rem */
     background: var(--primary);
     color: #fff;
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .submit-inquiry-btn:hover {
