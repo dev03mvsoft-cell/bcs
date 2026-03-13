@@ -164,9 +164,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroTimeline = gsap.timeline();
 
   heroTimeline
-    .from(".hero-bg-img", {
+    .from(".hero-bg-wrapper", {
       duration: 2,
-      x: "-10%",
       scale: 1.1,
       ease: "power2.out",
     })
@@ -219,37 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "-=0.6",
     );
 
-  // Hero Background Swiper (Horizontal)
-  const bgSwiper = new Swiper(".hero-bg-swiper", {
-    direction: "horizontal",
-    loop: canLoop(".hero-bg-swiper"),
-    allowTouchMove: false, // Background doesn't need touch
-    speed: 1200,
-    effect: "slide",
-  });
-
-  // Hero Text Swiper Initialization (Vertical)
-  const textSwiper = new Swiper(".hero-text-swiper", {
-    direction: "vertical",
-    loop: canLoop(".hero-text-swiper"),
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    speed: 1000,
-    mousewheel: true,
-  });
-
-  // Synchronize Sliders
-  if (textSwiper.on) {
-    textSwiper.on("slideChange", () => {
-      setTimeout(() => {
-        if (bgSwiper.slideToLoop) {
-          bgSwiper.slideToLoop(textSwiper.realIndex);
-        }
-      }, 500); // Increased delay as requested
-    });
-  }
 
   // Decorative Visual Animation
   if (document.querySelector(".hero-visual-wrapper")) {

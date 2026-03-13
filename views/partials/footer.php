@@ -130,3 +130,32 @@
 <a href="https://wa.me/919925818323" class="whatsapp-badge-ticket" target="_blank">
     <span class="whatsapp-text">Whatsapp</span>
 </a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Google Translate Widget (Hidden but Functional) -->
+<div id="google_translate_element" style="position: fixed; top: -9999px; left: -9999px; opacity: 0; pointer-events: none; z-index: -9999;"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,hi,gu,es,fr,de,ar,zh-CN,ru,pt,it,ja,ko',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Language Modal -->
+<?php include __DIR__ . '/language-modal.php'; ?>
+
+<!-- Custom Scripts with Asset Versioning -->
+<script src="<?php echo asset('public/js/main.js'); ?>"></script>
+</body>
+
+</html>

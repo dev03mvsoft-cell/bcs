@@ -1,110 +1,42 @@
-        <!-- Hero Section -->
         <section id="home" class="hero-section overflow-hidden position-relative">
-            <!-- Background Swiper (Slides L to R) -->
-            <div class="swiper hero-bg-swiper position-absolute top-0 start-0 w-100 h-100">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="hero-bg-img">
-                            <video autoplay muted loop playsinline poster="public/images/home/14.jpg" class="hero-bg-video">
-                                <source src="public/images/home/bcshomevideo.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <!-- <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('public/images/home/15.jpg');"></div>
-                    </div> -->
-                    <!-- Slide 3 -->
-                    <!-- <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('public/images/home/16.jpg');"></div>
-                    </div> -->
-                    <!-- Slide 4 -->
-                    <!-- <div class="swiper-slide">
-                        <div class="hero-bg-img" style="background-image: url('public/images/home/17.jpg');"></div>
-                    </div> -->
-                </div>
+            <!-- Background Video with Overlay -->
+            <div class="hero-bg-wrapper position-absolute top-0 start-0 w-100 h-100">
+                <div class="hero-bg-overlay"></div>
+                <video autoplay muted loop playsinline poster="public/images/home/14.jpg" class="hero-bg-video">
+                    <source src="public/images/home/bcshomevideo.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="container-fluid h-100 position-relative z-1 px-lg-5">
-                <div class="row h-100 align-items-center">
-                    <div class="col-lg-6">
-                        <!-- Hero Card (Slanted/Rounded) -->
-                        <div class="hero-card">
-                            <!-- ... existing card content ... -->
-                            <div class="hero-card-header d-flex align-items-center mb-4">
-                                <!-- <span class="hero-card-logo me-2">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary)" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M2 17L12 22L22 17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M2 12L12 17L22 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span> -->
-                                <span class="hero-card-brand">Business Care Solutions</span>
-                            </div>
+                <div class="row h-100 align-items-center justify-content-start">
+                    <div class="col-12">
+                        <div class="hero-border-frame">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <!-- Hero Content -->
+                                    <div class="hero-card">
+                                        <div class="hero-card-header d-flex align-items-center mb-4">
+                                            <!-- <img src="public/images/logo/herologo.png" alt="BCS Logo" class="hero-card-logo me-3"> -->
+                                            <span class="hero-card-brand">Business Care Solutions</span>
+                                        </div>
 
-                            <!-- Vertical Text Swiper -->
-                            <div class="swiper hero-text-swiper">
-                                <div class="swiper-wrapper">
-                                    <!-- Slide 1 -->
-                                    <div class="swiper-slide">
-                                        <div class="hero-slide-content">
+                                        <div class="hero-content-wrap">
                                             <div class="hero-text-mask">
-                                                <h1 class="hero-headline text-dark mb-4">Designing Powerful <br>Web Experiences</h1>
+                                                <h1 class="hero-headline mb-4">Designing Powerful <br>Web Experiences</h1>
                                             </div>
                                             <div class="hero-text-mask">
-                                                <p class="hero-subtext text-muted mb-5">Empowering your brand with modern visual strategies and high-impact digital campaigns.</p>
+                                                <p class="hero-subtext mb-5">Empowering your brand with modern visual strategies and high-impact digital campaigns.</p>
                                             </div>
+                                        </div>
+
+                                        <div class="hero-cta-wrapper">
+                                            <a href="/contact" class="btn btn-cyan btn-lg px-5 py-3 magnetic-item">LET'S BEGIN</a>
                                         </div>
                                     </div>
-                                    <!-- Slide 2 -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="hero-slide-content">
-                                            <div class="hero-text-mask">
-                                                <h1 class="hero-headline text-dark mb-4">Innovative <br>Creative Design</h1>
-                                            </div>
-                                            <div class="hero-text-mask">
-                                                <p class="hero-subtext text-muted mb-5">Bringing your ideas to life with state-of-the-art aesthetics and functional beauty.</p>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- Slide 3 -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="hero-slide-content">
-                                            <div class="hero-text-mask">
-                                                <h1 class="hero-headline text-dark mb-4">Strategic <br>Brand Growth</h1>
-                                            </div>
-                                            <div class="hero-text-mask">
-                                                <p class="hero-subtext text-muted mb-5">Scaling your business through data-backed insights and market-leading techniques.</p>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- Slide 4 -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="hero-slide-content">
-                                            <div class="hero-text-mask">
-                                                <h1 class="hero-headline text-dark mb-4">Digital <br>Transformation</h1>
-                                            </div>
-                                            <div class="hero-text-mask">
-                                                <p class="hero-subtext text-muted mb-5">Modernizing your presence for the next generation of digital consumers.</p>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </div>
-                            </div>
-
-                            <div class="hero-cta-wrapper">
-                                <a href="#" class="btn btn-cyan btn-lg px-5 py-3 magnetic-item open-inquiry-modal" data-bs-target="#inquiryModal">LET'S BEGIN</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Right Slide: Decorative Hero Logo -->
-                    <!-- <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
-                        <div class="hero-visual-wrapper text-center">
-                            <img src="public/images/logo/herologo.png" alt="Hero Business Visual" class="hero-visual-img">
-                            <h1 class="hero-visual-text">Business Care Solutions</h1>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -516,114 +448,18 @@
         <section class="loop-images" style="--bg: white;">
             <div class="row align-items-center">
                 <div class="col-sm-8 position-relative">
-                    <div class="carousel-track" style="--time: 60s; --total: 18;">
-                        <div class="carousel-item" style="--i: 1;">
-                            <img src="public/images/bcswork/bcsWork0.jpg" alt="Creative Portfolio Item 1 - BCS Gandhidham">
-                        </div>
-                        <div class="carousel-item" style="--i: 2;">
-                            <img src="public/images/bcswork/bcsWork1.jpg" alt="Graphic Design Portfolio Kutch">
-                        </div>
-                        <div class="carousel-item" style="--i: 3;">
-                            <img src="public/images/bcswork/bcsWork2.jpg" alt="Web Development Project Display">
-                        </div>
-                        <div class="carousel-item" style="--i: 4;">
-                            <img src="public/images/bcswork/bcsWork3.jpg" alt="Digital Marketing Success Case">
-                        </div>
-                        <div class="carousel-item" style="--i: 5;">
-                            <img src="public/images/bcswork/bcsWork4.jpg" alt="Brand Identity Design Portfolio">
-                        </div>
-                        <div class="carousel-item" style="--i: 6;">
-                            <img src="public/images/bcswork/bcsWork5.jpg" alt="Social Media Creative Work 6">
-                        </div>
-                        <div class="carousel-item" style="--i: 7;">
-                            <img src="public/images/bcswork/bcsWork6.jpg" alt="Website UI UX Prototype 7">
-                        </div>
-                        <div class="carousel-item" style="--i: 8;">
-                            <img src="public/images/bcswork/bcsWork7.jpg" alt="Logistics Website Project 8">
-                        </div>
-                        <div class="carousel-item" style="--i: 9;">
-                            <img src="public/images/bcswork/bcsWork8.jpg" alt="Shipping Company Website Design 9">
-                        </div>
-                        <div class="carousel-item" style="--i: 10;">
-                            <img src="public/images/bcswork/bcsWork9.jpg" alt="E-commerce Solutions Portfolio 10">
-                        </div>
-                        <div class="carousel-item" style="--i: 11;">
-                            <img src="public/images/bcswork/bcsWork10.jpg" alt="Full Stack Web Dev Gandhidham 11">
-                        </div>
-                        <div class="carousel-item" style="--i: 12;">
-                            <img src="public/images/bcswork/bcsWork12.jpg" alt="Visual Branding Agency Kutch 12">
-                        </div>
-                        <div class="carousel-item" style="--i: 13;">
-                            <img src="public/images/bcswork/bcsWork13.jpg" alt="Graphic Design Agency Assets 13">
-                        </div>
-                        <div class="carousel-item" style="--i: 14;">
-                            <img src="public/images/bcswork/bcsWork14.jpg" alt="Modern Web Experiences 14">
-                        </div>
-                        <div class="carousel-item" style="--i: 15;">
-                            <img src="public/images/bcswork/bcsWork15.jpg" alt="Corporate Website Design Showcase 15">
-                        </div>
-                        <div class="carousel-item" style="--i: 16;">
-                            <img src="public/images/bcswork/bcsWork16.jpg" alt="Advertising Portfolio BCS 16">
-                        </div>
-                        <div class="carousel-item" style="--i: 17;">
-                            <img src="public/images/bcswork/bcsWork17.jpg" alt="Digital Strategy Presentation 17">
-                        </div>
-                        <div class="carousel-item" style="--i: 18;">
-                            <img src="public/images/bcswork/bcsWork18.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 19;">
-                            <img src="public/images/bcswork/bcsWork19.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 20;">
-                            <img src="public/images/bcswork/bcsWork20.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 21;">
-                            <img src="public/images/bcswork/bcsWork21.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 22;">
-                            <img src="public/images/bcswork/bcsWork22.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 23;">
-                            <img src="public/images/bcswork/bcsWork23.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 24;">
-                            <img src="public/images/bcswork/bcsWork24.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 25;">
-                            <img src="public/images/bcswork/bcsWork25.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 26;">
-                            <img src="public/images/bcswork/bcsWork26.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 27;">
-                            <img src="public/images/bcswork/bcsWork27.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 28;">
-                            <img src="public/images/bcswork/bcsWork28.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 29;">
-                            <img src="public/images/bcswork/bcsWork29.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 30;">
-                            <img src="public/images/bcswork/bcsWork30.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 31;">
-                            <img src="public/images/bcswork/bcsWork31.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 32;">
-                            <img src="public/images/bcswork/bcsWork32.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 33;">
-                            <img src="public/images/bcswork/bcsWork33.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 34;">
-                            <img src="public/images/bcswork/bcsWork34.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-                        <div class="carousel-item" style="--i: 35;">
-                            <img src="public/images/bcswork/bcsWork35.jpg" alt="Creative Visual Showcase 18">
-                        </div>
-
-
+                    <?php
+                    $work_images = glob('public/images/bcswork/*.{jpg,jpeg,png,webp}', GLOB_BRACE);
+                    $total_images = count($work_images);
+                    ?>
+                    <div class="carousel-track" style="--time: <?php echo $total_images * 2.5; ?>s; --total: <?php echo $total_images; ?>;">
+                        <?php foreach ($work_images as $index => $image_path) :
+                            $filename = basename($image_path);
+                        ?>
+                            <div class="carousel-item" style="--i: <?php echo $index + 1; ?>;">
+                                <img src="<?php echo $image_path; ?>" alt="BCS Creative Portfolio - <?php echo $filename; ?>">
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="col-sm-4 px-lg-5 position-relative z-2">
@@ -812,8 +648,8 @@
                         Let's work together to create a powerful digital strategy that drives growth and success for your business in Gandhidham.
                     </p>
                     <div class="cta-btns">
-                        <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-lg">Contact Us</a>
-                        <a href="#how-we-help" class="btn btn-premium-outline btn-lg rounded-pill px-5 py-3">Explore Our Services</a>
+                        <a href="/contact" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-lg">Contact Us</a>
+                        <a href="/services" class="btn btn-premium-outline btn-lg rounded-pill px-5 py-3">Explore Our Services</a>
                     </div>
                 </div>
             </div>

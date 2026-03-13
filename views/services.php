@@ -60,7 +60,7 @@
                 <div class="service-card-v2"
                     data-service-title="Web Development"
                     data-service-tag="Modern Web Solutions"
-                    data-service-image="public/images/bcswork/bcswork_5.jpg"
+
                     data-service-intro="We specialize in creating cutting-edge web applications that drive business growth."
                     data-service-desc="Our development team uses the latest technologies and frameworks to deliver scalable, secure, and user-friendly solutions. From simple landing pages to complex enterprise applications, we ensure your web presence is not just functional but exceptional. Our focus is on creating experiences that users love and businesses rely on."
                     data-service-features-title="Technologies We Use"
@@ -95,7 +95,7 @@
                 <div class="service-card-v2"
                     data-service-title="Digital Transformation"
                     data-service-tag="Transformation"
-                    data-service-image="public/images/bcswork/bcsWork1.jpg"
+
                     data-service-intro="Modernizing your business core with AI-driven workflows and seamless digital integration."
                     data-service-desc="We leverage AI-driven workflow optimization and omnichannel strategies to modernize your entire customer experience, from backend to frontend, ensuring your business stays competitive in the digital age. Our approach reduces operational friction and increases customer lifetime value."
                     data-service-features="Process Automation,AI Integration,Cloud Migration,Digital Strategy,UX Modernization,Data Analytics">
@@ -128,7 +128,7 @@
                 <div class="service-card-v2"
                     data-service-title="SaaS Product Development"
                     data-service-tag="Product Dev"
-                    data-service-image="public/images/bcswork/bcsWork2.jpg"
+
                     data-service-intro="Building the next generation of scalable software-as-a-service platforms."
                     data-service-desc="We build horizontally scalable software-as-a-service platforms with advanced multi-tenant database designs, robust subscription logic, and integrated analytics for business intelligence. We focus on low-latency performance and developer-friendly API ecosystems."
                     data-service-features="Multi-Tenancy,Stripe Integration,Auto-Scaling,Real-time Sync,User Monitoring,AWS/Azure/GCP">
@@ -162,7 +162,7 @@
                 <div class="service-card-v2"
                     data-service-title="Custom Business Software"
                     data-service-tag="Enterprise"
-                    data-service-image="public/images/bcswork/bcsWork3.jpg"
+
                     data-service-intro="Tailor-made enterprise software solutions that fit your business like a glove."
                     data-service-desc="Specialized enterprise solutions for logistics and finance. We integrate real-time dashboards and custom reporting tools tailored to your unique KPIs and existing legacy systems. Our software is built to solve specific operational bottlenecks and drive efficiency."
                     data-service-features="CRM/ERP Custom,Inventory Tech,Financial Logic,Legacy Integration,Custom Reporting,Role-Based Access">
@@ -198,7 +198,7 @@
                 <div class="service-card-v2"
                     data-service-title="Quality Testing"
                     data-service-tag="Quality Assurance"
-                    data-service-image="public/images/bcswork/bcsWork4.jpg"
+
                     data-service-intro="Ensuring zero-error deployments with rigorous automated testing frameworks."
                     data-service-desc="Our QA engineers implement Selenium automation and intensive load testing, integrated directly into your CI/CD pipelines to ensure every deployment meets the highest quality standards. We perform deep security vulnerability scanning and UI/UX accessibility audits."
                     data-service-features="Appium/Selenium,Load & Stress,Pentesting,Regression Suites,Accessibility Web,Smoke Testing">
@@ -231,7 +231,7 @@
                 <div class="service-card-v2"
                     data-service-title="Low-Code Development"
                     data-service-tag="Fast Delivery"
-                    data-service-image="public/images/bcswork/bcsWork5.jpg"
+
                     data-service-intro="Slash development time by 50% with cutting-edge visual development platforms."
                     data-service-desc="Accelerate your time-to-market. Ideal for MVPs and complex internal tools, we utilize leading low-code platforms for rapid visual application building without sacrificing scalability. We specialize in complex business logic integration within low-code ecosystems."
                     data-service-features="MVP Launching,Internal Tools,Custom Extensions,Hybrid Approach,Cost Reduction,Rapid Iteration">
@@ -266,7 +266,7 @@
                 <div class="service-card-v2"
                     data-service-title="Social Media"
                     data-service-tag="Marketing"
-                    data-service-image="public/images/bcswork/bcswork_1.jpg"
+
                     data-service-intro="Scaling your brand authority with data-backed social media dominance."
                     data-service-desc="Maximize your reach with viral strategies, influencer management, and deep-dive sentiment analysis across all major social networks to build a loyal and engaged community. We focus on ROI-driven content that converts followers into brand advocates."
                     data-service-features="Viral Strategy,Influencer Tech,Sentiment Analysis,Content Engine,Paid Social Ads,Brand Safety">
@@ -298,7 +298,7 @@
                 <div class="service-card-v2"
                     data-service-title="Graphic Design"
                     data-service-tag="Branding & Design"
-                    data-service-image="public/images/bcswork/bcswork_2.jpg"
+
                     data-service-intro="Where art meets technology to create unforgettable visual experiences."
                     data-service-desc="High-fidelity UI/UX prototyping, 3D brand assets, and advanced motion graphics to create a stunning, cohesive visual identity that stands out in a crowded digital landscape. Our designs are purpose-built to engage, inspire, and drive conversion."
                     data-service-features="3D Asset Design,Motion Graphics,High-Fi UI/UX,Design Systems,Pitch Decks,Iconography">
@@ -332,7 +332,7 @@
                 <div class="service-card-v2"
                     data-service-title="SEO"
                     data-service-tag="Organic Growth"
-                    data-service-image="public/images/bcswork/bcswork_3.jpg"
+
                     data-service-intro="Dominating search results with a blend of technical SEO and content mastery."
                     data-service-desc="Go beyond keywords. We focus on advanced backlinking, technical schema markup, and Core Web Vitals to dominate search rankings and drive sustainable organic traffic growth. We optimize for intent, ensuring the traffic you get is the traffic that buys."
                     data-service-features="Technical Schema,Backlink Engine,Intent Research,Web Vitals Fix,Local SEO,Content Audit">
@@ -365,7 +365,7 @@
                 <div class="service-card-v2"
                     data-service-title="Branding"
                     data-service-tag="Identity"
-                    data-service-image="public/images/bcswork/bcswork_4.jpg"
+
                     data-service-intro="Building legendary brands through narrative storytelling and research."
                     data-service-desc="We build deep brand narratives and comprehensive brand books, backed by long-term market research to ensure lasting differentiation and an emotional connection with your audience. We define your voice, your mission, and your place in the global market."
                     data-service-features="Brand Books,Narrative Work,Market Research,Logo Ecosystem,Tone Guide,Brand Audit">
